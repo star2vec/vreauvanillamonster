@@ -44,9 +44,29 @@ those oils are mixtures of specific aroma molecules — some of which come in tw
 mirror-image forms.
 
 **[REC] Lead with linalool, because a cola formula plausibly contains *both* of its
-enantiomers at once** — S-(+) from coriander (~88% S), R-(−) from lavender and neroli. Then
-signpost the destination: this page is about a distinction that models cannot see, data did
-not keep, and a label format cannot hold.
+enantiomers at once** — S-(+) from coriander (~88% S), R-(−) from lavender and neroli.
+
+**[REC] The promissory opening.** Title and first paragraph carry the *audit* — concrete,
+countable, verifiable. Then one sentence promises the ceiling without arguing it, roughly:
+*"and the deeper problem isn't that the data was damaged — it's that the format was never
+able to hold what chirality actually does. I'll come back to that."*
+
+Then it is kept in §16, where the reader has already accepted the numbers.
+
+Why this beats leading with either one alone:
+
+- A reader who leaves at 20% takes away the audit, which is correct and shareable.
+- A reader who finishes gets the ceiling as an earned payoff.
+- The burden of proof sits on the audit, which is discharged mechanically by running one
+  script, while the ceiling arrives only after the numbers have bought trust.
+- A critic attacking the ceiling has, by that point, already conceded the audit.
+- Rhetorically decisive: an argument the reader *arrives at* feels like their own
+  conclusion; an argument asserted up front feels like a thesis to resist. The ceiling is
+  exactly the kind of claim that benefits from being earned rather than declared.
+
+The one real cost is that the title cannot also announce a representation-learning
+contribution. **[REC] Recover that in the subtitle** — title carries the audit, subtitle
+carries the ceiling.
 
 Corrections to carry, both of which are errors I made earlier and had to fix:
 - Citrus **peel** oil is **not** rich in linalool — 0.03–1.6% against 38–91% limonene.
@@ -380,11 +400,17 @@ Five widgets would read as a demo reel. Three makes the page feel alive.
 
 ## Open questions
 
-- **[YOU]** Is §16 the *headline* of the whole piece, or the closing act of a piece whose
-  headline is the audit? D works either way; it changes the title, the opening signpost, and
-  the abstract, but not the running order. My lean: make the audit the headline and §16 the
-  destination, because the audit has unarguable numbers and §16 is an argument. But §16 is
-  the more original contribution and is closer to your field.
+- ~~Is §16 the headline, or the closing act?~~ **Resolved via the promissory opening
+  (§1):** audit in the title, ceiling in the subtitle, promised in the first paragraph and
+  paid off in §16. Not a compromise — see the reasoning in §1.
+
+  Two definitions worth keeping straight, since the whole call turned on them. **The audit
+  is a measurement**: 534 fusions, 74 conflicting enantiomer pairs, every row reconstructed
+  from source, falsifiable by running one command. **The ceiling is an interpretation**: the
+  138-label format has no intensity dimension, and the best-evidenced enantiomer differences
+  are potency differences, so most of the phenomenon was never expressible. Its premises are
+  checkable but its conclusion is an inference. Measurements and interpretations carry
+  different burdens of proof, which is why the measurement goes first.
 - **[YOU]** Is §18 ("what died") page-visible or repo-only? I lean visible — strongest
   signal this wasn't a weekend's work — but it is your name on the self-criticism.
 - Lee et al. supplementary PDF still ungrepped. Until it is, the page cannot claim the
