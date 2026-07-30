@@ -1,0 +1,1709 @@
+{
+  "figures": [
+    {
+      "smiles": "C=C(C)C1CC=C(C)C(=O)C1",
+      "name": "carvone",
+      "exhibit": "Carvone -- the lead",
+      "labels": [
+        "mint"
+      ],
+      "file": "figures/carvone-00.svg",
+      "wedge_or_hash_bonds": 0,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": []
+    },
+    {
+      "smiles": "C=C(C)[C@@H]1CC=C(C)C(=O)C1",
+      "name": "(-)-carvone",
+      "exhibit": "Carvone -- the lead",
+      "labels": [
+        "herbal",
+        "mint",
+        "sweet"
+      ],
+      "file": "figures/carvone-01.svg",
+      "wedge_or_hash_bonds": 1,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "R"
+      ]
+    },
+    {
+      "smiles": "C=C(C)[C@H]1CC=C(C)C(=O)C1",
+      "name": "d-carvone",
+      "exhibit": "Carvone -- the lead",
+      "labels": [
+        "mint",
+        "spicy"
+      ],
+      "file": "figures/d-carvone-02.svg",
+      "wedge_or_hash_bonds": 1,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "S"
+      ]
+    },
+    {
+      "smiles": "C=C(C)C1CCC2=CC(=O)CC(C)C2(C)C1",
+      "name": null,
+      "exhibit": "Nootkatone -- DEMOTED to a citation-drift case study",
+      "labels": [
+        "citrus",
+        "grapefruit"
+      ],
+      "file": "figures/nootkatone-03.svg",
+      "wedge_or_hash_bonds": 0,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": []
+    },
+    {
+      "smiles": "C=C(C)[C@@H]1CCC2=CC(=O)C[C@@H](C)[C@]2(C)C1",
+      "name": "nootkatone",
+      "exhibit": "Nootkatone -- DEMOTED to a citation-drift case study",
+      "labels": [
+        "citrus",
+        "fruit skin",
+        "grapefruit",
+        "orange",
+        "sweet",
+        "woody"
+      ],
+      "file": "figures/nootkatone-04.svg",
+      "wedge_or_hash_bonds": 3,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "R",
+        "R",
+        "S"
+      ]
+    },
+    {
+      "smiles": "C=C(C)[C@H]1CCC2=CC(=O)C[C@H](C)[C@@]2(C)C1",
+      "name": "(-)-nootkatone",
+      "exhibit": "Nootkatone -- DEMOTED to a citation-drift case study",
+      "labels": [
+        "terpenic"
+      ],
+      "file": "figures/nootkatone-05.svg",
+      "wedge_or_hash_bonds": 3,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "S",
+        "S",
+        "R"
+      ]
+    },
+    {
+      "smiles": "CC1=CCC2CC1C2(C)C",
+      "name": "alpha-pinene",
+      "exhibit": "alpha-Pinene -- the human-validated pair",
+      "labels": [
+        "camphoreous",
+        "cooling",
+        "earthy",
+        "fresh",
+        "herbal",
+        "pine",
+        "sweet",
+        "terpenic",
+        "woody"
+      ],
+      "file": "figures/alpha-pinene-06.svg",
+      "wedge_or_hash_bonds": 0,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": []
+    },
+    {
+      "smiles": "CC1=CC[C@@H]2C[C@H]1C2(C)C",
+      "name": "(+)-alpha-pinene",
+      "exhibit": "alpha-Pinene -- the human-validated pair",
+      "labels": [
+        "aromatic",
+        "herbal",
+        "mint",
+        "terpenic"
+      ],
+      "file": "figures/alpha-pinene-07.svg",
+      "wedge_or_hash_bonds": 2,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "R",
+        "R"
+      ]
+    },
+    {
+      "smiles": "CC1=CC[C@H]2C[C@@H]1C2(C)C",
+      "name": "(-)-alpha-pinene",
+      "exhibit": "alpha-Pinene -- the human-validated pair",
+      "labels": [
+        "earthy",
+        "fresh",
+        "herbal",
+        "pine",
+        "sharp",
+        "terpenic",
+        "warm",
+        "woody"
+      ],
+      "file": "figures/alpha-pinene-08.svg",
+      "wedge_or_hash_bonds": 2,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "S",
+        "S"
+      ]
+    },
+    {
+      "smiles": "CC1CCCC2(C)CCCCC12O",
+      "name": "octahydro-4,8a-dimethyl-4a(2h)-naphthol",
+      "exhibit": "Geosmin -- petrichor, five labels against one",
+      "labels": [
+        "earthy",
+        "fresh"
+      ],
+      "file": "figures/octahydro-4-8a-dimethyl-4a-2h-naphthol-09.svg",
+      "wedge_or_hash_bonds": 0,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": []
+    },
+    {
+      "smiles": "C[C@@H]1CCC[C@]2(C)CCCC[C@@]12O",
+      "name": "(+)-geosmin",
+      "exhibit": "Geosmin -- petrichor, five labels against one",
+      "labels": [
+        "earthy"
+      ],
+      "file": "figures/geosmin-10.svg",
+      "wedge_or_hash_bonds": 3,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "R",
+        "S",
+        "R"
+      ]
+    },
+    {
+      "smiles": "C[C@H]1CCC[C@@]2(C)CCCC[C@@]12O",
+      "name": "5173-70-6",
+      "exhibit": "Geosmin -- petrichor, five labels against one",
+      "labels": [
+        "earthy",
+        "musty"
+      ],
+      "file": "figures/5173-70-6-11.svg",
+      "wedge_or_hash_bonds": 3,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "S",
+        "R",
+        "R"
+      ]
+    },
+    {
+      "smiles": "C[C@H]1CCC[C@@]2(C)CCCC[C@]12O",
+      "name": "geosmin",
+      "exhibit": "Geosmin -- petrichor, five labels against one",
+      "labels": [
+        "earthy",
+        "fresh",
+        "green",
+        "herbal",
+        "musty"
+      ],
+      "file": "figures/geosmin-12.svg",
+      "wedge_or_hash_bonds": 3,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "S",
+        "R",
+        "S"
+      ]
+    },
+    {
+      "smiles": "CC(C)=C1CCC(C)CC1=O",
+      "name": "pulegone",
+      "exhibit": "Pulegone -- seven labels against one",
+      "labels": [
+        "mint"
+      ],
+      "file": "figures/pulegone-13.svg",
+      "wedge_or_hash_bonds": 0,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": []
+    },
+    {
+      "smiles": "CC(C)=C1CC[C@@H](C)CC1=O",
+      "name": "(+)-pulegone",
+      "exhibit": "Pulegone -- seven labels against one",
+      "labels": [
+        "camphoreous",
+        "fresh",
+        "herbal",
+        "metallic",
+        "mint",
+        "sulfurous",
+        "sweet"
+      ],
+      "file": "figures/pulegone-14.svg",
+      "wedge_or_hash_bonds": 1,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "R"
+      ]
+    },
+    {
+      "smiles": "CC(C)=C1CC[C@H](C)CC1=O",
+      "name": "(-)-pulegone",
+      "exhibit": "Pulegone -- seven labels against one",
+      "labels": [
+        "mint"
+      ],
+      "file": "figures/pulegone-15.svg",
+      "wedge_or_hash_bonds": 1,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "S"
+      ]
+    },
+    {
+      "smiles": "CC(C)[C@@H]1CC[C@@H](C)CC1=O",
+      "name": "(-)-menthone",
+      "exhibit": "Menthone -- the menthol exhibit that actually works",
+      "labels": [
+        "anisic",
+        "camphoreous",
+        "cooling",
+        "fresh",
+        "green",
+        "herbal",
+        "mint",
+        "sweet"
+      ],
+      "file": "figures/menthone-16.svg",
+      "wedge_or_hash_bonds": 2,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "S",
+        "R"
+      ]
+    },
+    {
+      "smiles": "CC(C)[C@@H]1CC[C@H](C)CC1=O",
+      "name": "isomenthone",
+      "exhibit": "Menthone -- the menthol exhibit that actually works",
+      "labels": [
+        "mint"
+      ],
+      "file": "figures/isomenthone-17.svg",
+      "wedge_or_hash_bonds": 2,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "S",
+        "S"
+      ]
+    },
+    {
+      "smiles": "CC(C)[C@H]1CC[C@@H](C)CC1=O",
+      "name": "(+)-isomenthone",
+      "exhibit": "Menthone -- the menthol exhibit that actually works",
+      "labels": [
+        "mint"
+      ],
+      "file": "figures/isomenthone-18.svg",
+      "wedge_or_hash_bonds": 2,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "R",
+        "R"
+      ]
+    },
+    {
+      "smiles": "CC(C)[C@H]1CC[C@H](C)CC1=O",
+      "name": "(+)-menthone",
+      "exhibit": "Menthone -- the menthol exhibit that actually works",
+      "labels": [
+        "cooling",
+        "mint"
+      ],
+      "file": "figures/menthone-19.svg",
+      "wedge_or_hash_bonds": 2,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "R",
+        "S"
+      ]
+    },
+    {
+      "smiles": "CC1CCC(C(C)C)C(=O)C1",
+      "name": "10458-14-7",
+      "exhibit": "Menthone -- the menthol exhibit that actually works",
+      "labels": [
+        "camphoreous",
+        "cooling",
+        "ethereal",
+        "mint",
+        "sweet"
+      ],
+      "file": "figures/10458-14-7-20.svg",
+      "wedge_or_hash_bonds": 0,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": []
+    },
+    {
+      "smiles": "CCC(C)O",
+      "name": "2-butanol",
+      "exhibit": "(R)- vs (S)-2-butanol -- the honest counter-exhibit",
+      "labels": [
+        "alcoholic",
+        "apricot",
+        "fermented",
+        "fruity",
+        "oily",
+        "solvent",
+        "sweet",
+        "winey"
+      ],
+      "file": "figures/2-butanol-21.svg",
+      "wedge_or_hash_bonds": 0,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": []
+    },
+    {
+      "smiles": "CC[C@@H](C)O",
+      "name": "(r)-(-)-2-butanol",
+      "exhibit": "(R)- vs (S)-2-butanol -- the honest counter-exhibit",
+      "labels": [
+        "fruity",
+        "oily",
+        "winey"
+      ],
+      "file": "figures/r-2-butanol-22.svg",
+      "wedge_or_hash_bonds": 1,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "R"
+      ]
+    },
+    {
+      "smiles": "CC[C@H](C)O",
+      "name": "(s)-(+)-2-butanol",
+      "exhibit": "(R)- vs (S)-2-butanol -- the honest counter-exhibit",
+      "labels": [
+        "oily",
+        "winey"
+      ],
+      "file": "figures/s-2-butanol-23.svg",
+      "wedge_or_hash_bonds": 1,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "S"
+      ]
+    },
+    {
+      "smiles": "CC[C@@H](C)CC=O",
+      "name": "schembl9421367",
+      "exhibit": "3-methylpentanal -- one enantiomer recorded odorless",
+      "labels": [
+        "odorless"
+      ],
+      "file": "figures/schembl9421367-24.svg",
+      "wedge_or_hash_bonds": 1,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "R"
+      ]
+    },
+    {
+      "smiles": "CC[C@H](C)CC=O",
+      "name": "(3s)-3-methylpentanal",
+      "exhibit": "3-methylpentanal -- one enantiomer recorded odorless",
+      "labels": [
+        "fresh",
+        "fruity",
+        "green",
+        "pungent"
+      ],
+      "file": "figures/3s-3-methylpentanal-25.svg",
+      "wedge_or_hash_bonds": 1,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "S"
+      ]
+    },
+    {
+      "smiles": "CC(C)[C@@H]1CC[C@@H](C)C[C@@H]1O",
+      "name": "(+)-neomenthol",
+      "exhibit": "Menthol skeleton -- 2D-blindness only, NOT a parity exhibit",
+      "labels": [
+        "bitter",
+        "cooling",
+        "mint",
+        "musty",
+        "sweet"
+      ],
+      "file": "figures/neomenthol-26.svg",
+      "wedge_or_hash_bonds": 3,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "S",
+        "R",
+        "S"
+      ]
+    },
+    {
+      "smiles": "CC(C)[C@@H]1CC[C@@H](C)C[C@H]1O",
+      "name": "l-menthol",
+      "exhibit": "Menthol skeleton -- 2D-blindness only, NOT a parity exhibit",
+      "labels": [
+        "cooling",
+        "mint"
+      ],
+      "file": "figures/l-menthol-27.svg",
+      "wedge_or_hash_bonds": 3,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "S",
+        "R",
+        "R"
+      ]
+    },
+    {
+      "smiles": "CC(C)[C@H]1CC[C@@H](C)CC1O",
+      "name": "neomenthol",
+      "exhibit": "Menthol skeleton -- 2D-blindness only, NOT a parity exhibit",
+      "labels": [
+        "camphoreous",
+        "cooling",
+        "mint",
+        "musty",
+        "pine"
+      ],
+      "file": "figures/neomenthol-28.svg",
+      "wedge_or_hash_bonds": 2,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "R",
+        "R"
+      ]
+    },
+    {
+      "smiles": "CC(C)[C@H]1CC[C@@H](C)C[C@@H]1O",
+      "name": "(+)-isomenthol",
+      "exhibit": "Menthol skeleton -- 2D-blindness only, NOT a parity exhibit",
+      "labels": [
+        "camphoreous",
+        "earthy",
+        "hay",
+        "herbal",
+        "musty",
+        "sweet"
+      ],
+      "file": "figures/isomenthol-29.svg",
+      "wedge_or_hash_bonds": 3,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "R",
+        "R",
+        "S"
+      ]
+    },
+    {
+      "smiles": "CC(C)[C@H]1CC[C@@H](C)C[C@H]1O",
+      "name": "neoisomenthol",
+      "exhibit": "Menthol skeleton -- 2D-blindness only, NOT a parity exhibit",
+      "labels": [
+        "camphoreous",
+        "musty",
+        "woody"
+      ],
+      "file": "figures/neoisomenthol-30.svg",
+      "wedge_or_hash_bonds": 3,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "R",
+        "R",
+        "R"
+      ]
+    },
+    {
+      "smiles": "CC1CCC(C(C)C)C(O)C1",
+      "name": "menthol",
+      "exhibit": "Menthol skeleton -- 2D-blindness only, NOT a parity exhibit",
+      "labels": [
+        "cooling",
+        "mint",
+        "musty",
+        "woody"
+      ],
+      "file": "figures/menthol-31.svg",
+      "wedge_or_hash_bonds": 0,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": []
+    },
+    {
+      "smiles": "C=CC1(C)CCC(C(C)C=O)O1",
+      "name": null,
+      "exhibit": "Lily aldehyde -- the widest fusion",
+      "labels": [
+        "floral",
+        "fresh",
+        "lily",
+        "sweet"
+      ],
+      "file": "figures/lily-aldehyde-32.svg",
+      "wedge_or_hash_bonds": 0,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": []
+    },
+    {
+      "smiles": "C=C[C@@]1(C)CC[C@@H]([C@@H](C)C=O)O1",
+      "name": "unii-a1nfm3874l",
+      "exhibit": "Lily aldehyde -- the widest fusion",
+      "labels": [
+        "floral",
+        "fresh"
+      ],
+      "file": "figures/unii-a1nfm3874l-33.svg",
+      "wedge_or_hash_bonds": 3,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "R",
+        "S",
+        "R"
+      ]
+    },
+    {
+      "smiles": "C=C[C@@]1(C)CC[C@H]([C@@H](C)C=O)O1",
+      "name": "unii-2j26s5u6si",
+      "exhibit": "Lily aldehyde -- the widest fusion",
+      "labels": [
+        "floral"
+      ],
+      "file": "figures/unii-2j26s5u6si-34.svg",
+      "wedge_or_hash_bonds": 3,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "R",
+        "R",
+        "R"
+      ]
+    },
+    {
+      "smiles": "C=C[C@@]1(C)CC[C@H]([C@H](C)C=O)O1",
+      "name": "unii-m0kl78494n",
+      "exhibit": "Lily aldehyde -- the widest fusion",
+      "labels": [
+        "floral"
+      ],
+      "file": "figures/unii-m0kl78494n-35.svg",
+      "wedge_or_hash_bonds": 3,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "R",
+        "R",
+        "S"
+      ]
+    },
+    {
+      "smiles": "C=C[C@]1(C)CC[C@@H]([C@@H](C)C=O)O1",
+      "name": "unii-m4f9n3m370",
+      "exhibit": "Lily aldehyde -- the widest fusion",
+      "labels": [
+        "floral",
+        "fresh"
+      ],
+      "file": "figures/unii-m4f9n3m370-36.svg",
+      "wedge_or_hash_bonds": 3,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "S",
+        "S",
+        "R"
+      ]
+    },
+    {
+      "smiles": "C=C[C@]1(C)CC[C@@H]([C@H](C)C=O)O1",
+      "name": "unii-pg9rxh5sua",
+      "exhibit": "Lily aldehyde -- the widest fusion",
+      "labels": [
+        "floral",
+        "fresh"
+      ],
+      "file": "figures/unii-pg9rxh5sua-37.svg",
+      "wedge_or_hash_bonds": 3,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "S",
+        "S",
+        "S"
+      ]
+    },
+    {
+      "smiles": "C=C[C@]1(C)CC[C@H]([C@@H](C)C=O)O1",
+      "name": "(2r,2'r,5's)-lilac aldehyde",
+      "exhibit": "Lily aldehyde -- the widest fusion",
+      "labels": [
+        "floral",
+        "sweet"
+      ],
+      "file": "figures/2r-2-r-5-s-lilac-aldehyde-38.svg",
+      "wedge_or_hash_bonds": 3,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "S",
+        "R",
+        "R"
+      ]
+    },
+    {
+      "smiles": "C=C[C@]1(C)CC[C@H]([C@H](C)C=O)O1",
+      "name": "unii-4tb943ojyt",
+      "exhibit": "Lily aldehyde -- the widest fusion",
+      "labels": [
+        "floral",
+        "sweet"
+      ],
+      "file": "figures/unii-4tb943ojyt-39.svg",
+      "wedge_or_hash_bonds": 3,
+      "ez_bonds": 0,
+      "stereo_labels_drawn": [
+        "S",
+        "R",
+        "S"
+      ]
+    },
+    {
+      "smiles": "CC(C)=CCC/C(C)=C/CO",
+      "name": "geraniol",
+      "exhibit": "Geraniol / nerol -- demoted to a footnote",
+      "labels": [
+        "citrus",
+        "floral",
+        "fruity",
+        "rose",
+        "sweet",
+        "waxy"
+      ],
+      "file": "figures/geraniol-40.svg",
+      "wedge_or_hash_bonds": 0,
+      "ez_bonds": 1,
+      "stereo_labels_drawn": [
+        "E"
+      ]
+    },
+    {
+      "smiles": "CC(C)=CCC/C(C)=C\\CO",
+      "name": "nerol",
+      "exhibit": "Geraniol / nerol -- demoted to a footnote",
+      "labels": [
+        "citrus",
+        "fresh",
+        "natural",
+        "rose",
+        "sweet"
+      ],
+      "file": "figures/nerol-41.svg",
+      "wedge_or_hash_bonds": 0,
+      "ez_bonds": 1,
+      "stereo_labels_drawn": [
+        "Z"
+      ]
+    }
+  ],
+  "mirror_pair": {
+    "molecule": "carvone",
+    "note": "Built by embedding once and reflecting, so the two share atom ordering and are exact mirror images. Independently embedded enantiomers would differ by over 1 angstrom through conformer artefacts alone.",
+    "molecules": [
+      {
+        "label": "A",
+        "smiles": "C=C(C)[C@@H]1CC=C(C)C(=O)C1",
+        "cip": {
+          "4": "R"
+        },
+        "atoms": [
+          {
+            "i": 0,
+            "el": "C",
+            "xyz": [
+              3.6613,
+              -0.1641,
+              -0.6834
+            ],
+            "heavy": true
+          },
+          {
+            "i": 1,
+            "el": "C",
+            "xyz": [
+              2.2256,
+              -0.1145,
+              -0.2665
+            ],
+            "heavy": true
+          },
+          {
+            "i": 2,
+            "el": "C",
+            "xyz": [
+              1.6493,
+              -1.014,
+              0.5473
+            ],
+            "heavy": true
+          },
+          {
+            "i": 3,
+            "el": "C",
+            "xyz": [
+              0.2035,
+              -0.9852,
+              0.9509
+            ],
+            "heavy": true
+          },
+          {
+            "i": 4,
+            "el": "C",
+            "xyz": [
+              -0.6645,
+              -0.1904,
+              -0.0457
+            ],
+            "heavy": true
+          },
+          {
+            "i": 5,
+            "el": "C",
+            "xyz": [
+              -0.0185,
+              1.1765,
+              -0.2982
+            ],
+            "heavy": true
+          },
+          {
+            "i": 6,
+            "el": "C",
+            "xyz": [
+              1.4124,
+              1.033,
+              -0.7745
+            ],
+            "heavy": true
+          },
+          {
+            "i": 7,
+            "el": "O",
+            "xyz": [
+              1.9223,
+              1.8692,
+              -1.5192
+            ],
+            "heavy": true
+          },
+          {
+            "i": 8,
+            "el": "C",
+            "xyz": [
+              -2.139,
+              -0.0501,
+              0.3351
+            ],
+            "heavy": true
+          },
+          {
+            "i": 9,
+            "el": "C",
+            "xyz": [
+              -2.6418,
+              -0.2672,
+              1.563
+            ],
+            "heavy": true
+          },
+          {
+            "i": 10,
+            "el": "C",
+            "xyz": [
+              -3.0669,
+              0.3274,
+              -0.7949
+            ],
+            "heavy": true
+          },
+          {
+            "i": 11,
+            "el": "H",
+            "xyz": [
+              3.7416,
+              -0.2424,
+              -1.7725
+            ],
+            "heavy": false
+          },
+          {
+            "i": 12,
+            "el": "H",
+            "xyz": [
+              4.181,
+              -1.0252,
+              -0.2499
+            ],
+            "heavy": false
+          },
+          {
+            "i": 13,
+            "el": "H",
+            "xyz": [
+              4.1878,
+              0.739,
+              -0.358
+            ],
+            "heavy": false
+          },
+          {
+            "i": 14,
+            "el": "H",
+            "xyz": [
+              2.2441,
+              -1.8297,
+              0.9532
+            ],
+            "heavy": false
+          },
+          {
+            "i": 15,
+            "el": "H",
+            "xyz": [
+              -0.1667,
+              -2.0162,
+              1.0076
+            ],
+            "heavy": false
+          },
+          {
+            "i": 16,
+            "el": "H",
+            "xyz": [
+              0.1517,
+              -0.562,
+              1.9609
+            ],
+            "heavy": false
+          },
+          {
+            "i": 17,
+            "el": "H",
+            "xyz": [
+              -0.6389,
+              -0.7564,
+              -0.99
+            ],
+            "heavy": false
+          },
+          {
+            "i": 18,
+            "el": "H",
+            "xyz": [
+              -0.0173,
+              1.7927,
+              0.6087
+            ],
+            "heavy": false
+          },
+          {
+            "i": 19,
+            "el": "H",
+            "xyz": [
+              -0.5667,
+              1.7186,
+              -1.077
+            ],
+            "heavy": false
+          },
+          {
+            "i": 20,
+            "el": "H",
+            "xyz": [
+              -3.7052,
+              -0.1614,
+              1.7631
+            ],
+            "heavy": false
+          },
+          {
+            "i": 21,
+            "el": "H",
+            "xyz": [
+              -2.0308,
+              -0.5486,
+              2.413
+            ],
+            "heavy": false
+          },
+          {
+            "i": 22,
+            "el": "H",
+            "xyz": [
+              -2.8421,
+              1.3328,
+              -1.1628
+            ],
+            "heavy": false
+          },
+          {
+            "i": 23,
+            "el": "H",
+            "xyz": [
+              -2.9639,
+              -0.3804,
+              -1.6239
+            ],
+            "heavy": false
+          },
+          {
+            "i": 24,
+            "el": "H",
+            "xyz": [
+              -4.118,
+              0.3186,
+              -0.4864
+            ],
+            "heavy": false
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 1,
+            "order": 1.0
+          },
+          {
+            "i": 1,
+            "j": 2,
+            "order": 2.0
+          },
+          {
+            "i": 2,
+            "j": 3,
+            "order": 1.0
+          },
+          {
+            "i": 3,
+            "j": 4,
+            "order": 1.0
+          },
+          {
+            "i": 4,
+            "j": 5,
+            "order": 1.0
+          },
+          {
+            "i": 5,
+            "j": 6,
+            "order": 1.0
+          },
+          {
+            "i": 6,
+            "j": 7,
+            "order": 2.0
+          },
+          {
+            "i": 4,
+            "j": 8,
+            "order": 1.0
+          },
+          {
+            "i": 8,
+            "j": 9,
+            "order": 2.0
+          },
+          {
+            "i": 8,
+            "j": 10,
+            "order": 1.0
+          },
+          {
+            "i": 6,
+            "j": 1,
+            "order": 1.0
+          },
+          {
+            "i": 0,
+            "j": 11,
+            "order": 1.0
+          },
+          {
+            "i": 0,
+            "j": 12,
+            "order": 1.0
+          },
+          {
+            "i": 0,
+            "j": 13,
+            "order": 1.0
+          },
+          {
+            "i": 2,
+            "j": 14,
+            "order": 1.0
+          },
+          {
+            "i": 3,
+            "j": 15,
+            "order": 1.0
+          },
+          {
+            "i": 3,
+            "j": 16,
+            "order": 1.0
+          },
+          {
+            "i": 4,
+            "j": 17,
+            "order": 1.0
+          },
+          {
+            "i": 5,
+            "j": 18,
+            "order": 1.0
+          },
+          {
+            "i": 5,
+            "j": 19,
+            "order": 1.0
+          },
+          {
+            "i": 9,
+            "j": 20,
+            "order": 1.0
+          },
+          {
+            "i": 9,
+            "j": 21,
+            "order": 1.0
+          },
+          {
+            "i": 10,
+            "j": 22,
+            "order": 1.0
+          },
+          {
+            "i": 10,
+            "j": 23,
+            "order": 1.0
+          },
+          {
+            "i": 10,
+            "j": 24,
+            "order": 1.0
+          }
+        ],
+        "heavy_atom_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "stereocentres": [
+          {
+            "atom": 4,
+            "specified": true,
+            "descriptor": "Tet_CCW",
+            "controlling_atoms": [
+              3,
+              5,
+              8,
+              17
+            ],
+            "signed_volume": 2.481266109268337
+          }
+        ]
+      },
+      {
+        "label": "B (reflected)",
+        "smiles": "C=C(C)[C@H]1CC=C(C)C(=O)C1",
+        "cip": {
+          "4": "S"
+        },
+        "atoms": [
+          {
+            "i": 0,
+            "el": "C",
+            "xyz": [
+              -3.6613,
+              -0.1641,
+              -0.6834
+            ],
+            "heavy": true
+          },
+          {
+            "i": 1,
+            "el": "C",
+            "xyz": [
+              -2.2256,
+              -0.1145,
+              -0.2665
+            ],
+            "heavy": true
+          },
+          {
+            "i": 2,
+            "el": "C",
+            "xyz": [
+              -1.6493,
+              -1.014,
+              0.5473
+            ],
+            "heavy": true
+          },
+          {
+            "i": 3,
+            "el": "C",
+            "xyz": [
+              -0.2035,
+              -0.9852,
+              0.9509
+            ],
+            "heavy": true
+          },
+          {
+            "i": 4,
+            "el": "C",
+            "xyz": [
+              0.6645,
+              -0.1904,
+              -0.0457
+            ],
+            "heavy": true
+          },
+          {
+            "i": 5,
+            "el": "C",
+            "xyz": [
+              0.0185,
+              1.1765,
+              -0.2982
+            ],
+            "heavy": true
+          },
+          {
+            "i": 6,
+            "el": "C",
+            "xyz": [
+              -1.4124,
+              1.033,
+              -0.7745
+            ],
+            "heavy": true
+          },
+          {
+            "i": 7,
+            "el": "O",
+            "xyz": [
+              -1.9223,
+              1.8692,
+              -1.5192
+            ],
+            "heavy": true
+          },
+          {
+            "i": 8,
+            "el": "C",
+            "xyz": [
+              2.139,
+              -0.0501,
+              0.3351
+            ],
+            "heavy": true
+          },
+          {
+            "i": 9,
+            "el": "C",
+            "xyz": [
+              2.6418,
+              -0.2672,
+              1.563
+            ],
+            "heavy": true
+          },
+          {
+            "i": 10,
+            "el": "C",
+            "xyz": [
+              3.0669,
+              0.3274,
+              -0.7949
+            ],
+            "heavy": true
+          },
+          {
+            "i": 11,
+            "el": "H",
+            "xyz": [
+              -3.7416,
+              -0.2424,
+              -1.7725
+            ],
+            "heavy": false
+          },
+          {
+            "i": 12,
+            "el": "H",
+            "xyz": [
+              -4.181,
+              -1.0252,
+              -0.2499
+            ],
+            "heavy": false
+          },
+          {
+            "i": 13,
+            "el": "H",
+            "xyz": [
+              -4.1878,
+              0.739,
+              -0.358
+            ],
+            "heavy": false
+          },
+          {
+            "i": 14,
+            "el": "H",
+            "xyz": [
+              -2.2441,
+              -1.8297,
+              0.9532
+            ],
+            "heavy": false
+          },
+          {
+            "i": 15,
+            "el": "H",
+            "xyz": [
+              0.1667,
+              -2.0162,
+              1.0076
+            ],
+            "heavy": false
+          },
+          {
+            "i": 16,
+            "el": "H",
+            "xyz": [
+              -0.1517,
+              -0.562,
+              1.9609
+            ],
+            "heavy": false
+          },
+          {
+            "i": 17,
+            "el": "H",
+            "xyz": [
+              0.6389,
+              -0.7564,
+              -0.99
+            ],
+            "heavy": false
+          },
+          {
+            "i": 18,
+            "el": "H",
+            "xyz": [
+              0.0173,
+              1.7927,
+              0.6087
+            ],
+            "heavy": false
+          },
+          {
+            "i": 19,
+            "el": "H",
+            "xyz": [
+              0.5667,
+              1.7186,
+              -1.077
+            ],
+            "heavy": false
+          },
+          {
+            "i": 20,
+            "el": "H",
+            "xyz": [
+              3.7052,
+              -0.1614,
+              1.7631
+            ],
+            "heavy": false
+          },
+          {
+            "i": 21,
+            "el": "H",
+            "xyz": [
+              2.0308,
+              -0.5486,
+              2.413
+            ],
+            "heavy": false
+          },
+          {
+            "i": 22,
+            "el": "H",
+            "xyz": [
+              2.8421,
+              1.3328,
+              -1.1628
+            ],
+            "heavy": false
+          },
+          {
+            "i": 23,
+            "el": "H",
+            "xyz": [
+              2.9639,
+              -0.3804,
+              -1.6239
+            ],
+            "heavy": false
+          },
+          {
+            "i": 24,
+            "el": "H",
+            "xyz": [
+              4.118,
+              0.3186,
+              -0.4864
+            ],
+            "heavy": false
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 1,
+            "order": 1.0
+          },
+          {
+            "i": 1,
+            "j": 2,
+            "order": 2.0
+          },
+          {
+            "i": 2,
+            "j": 3,
+            "order": 1.0
+          },
+          {
+            "i": 3,
+            "j": 4,
+            "order": 1.0
+          },
+          {
+            "i": 4,
+            "j": 5,
+            "order": 1.0
+          },
+          {
+            "i": 5,
+            "j": 6,
+            "order": 1.0
+          },
+          {
+            "i": 6,
+            "j": 7,
+            "order": 2.0
+          },
+          {
+            "i": 4,
+            "j": 8,
+            "order": 1.0
+          },
+          {
+            "i": 8,
+            "j": 9,
+            "order": 2.0
+          },
+          {
+            "i": 8,
+            "j": 10,
+            "order": 1.0
+          },
+          {
+            "i": 6,
+            "j": 1,
+            "order": 1.0
+          },
+          {
+            "i": 0,
+            "j": 11,
+            "order": 1.0
+          },
+          {
+            "i": 0,
+            "j": 12,
+            "order": 1.0
+          },
+          {
+            "i": 0,
+            "j": 13,
+            "order": 1.0
+          },
+          {
+            "i": 2,
+            "j": 14,
+            "order": 1.0
+          },
+          {
+            "i": 3,
+            "j": 15,
+            "order": 1.0
+          },
+          {
+            "i": 3,
+            "j": 16,
+            "order": 1.0
+          },
+          {
+            "i": 4,
+            "j": 17,
+            "order": 1.0
+          },
+          {
+            "i": 5,
+            "j": 18,
+            "order": 1.0
+          },
+          {
+            "i": 5,
+            "j": 19,
+            "order": 1.0
+          },
+          {
+            "i": 9,
+            "j": 20,
+            "order": 1.0
+          },
+          {
+            "i": 9,
+            "j": 21,
+            "order": 1.0
+          },
+          {
+            "i": 10,
+            "j": 22,
+            "order": 1.0
+          },
+          {
+            "i": 10,
+            "j": 23,
+            "order": 1.0
+          },
+          {
+            "i": 10,
+            "j": 24,
+            "order": 1.0
+          }
+        ],
+        "heavy_atom_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "stereocentres": [
+          {
+            "atom": 4,
+            "specified": true,
+            "descriptor": "Tet_CW",
+            "controlling_atoms": [
+              3,
+              5,
+              8,
+              17
+            ],
+            "signed_volume": -2.481266109268337
+          }
+        ]
+      }
+    ],
+    "distance_matrix_identical": true,
+    "distance_matrix_max_abs_difference": 0.0,
+    "heavy_atom_labels": [
+      "C0",
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "O7",
+      "C8",
+      "C9",
+      "C10"
+    ],
+    "distance_matrix_heavy": [
+      [
+        0.0,
+        1.4958,
+        2.507,
+        3.9116,
+        4.3726,
+        3.9353,
+        2.5493,
+        2.8031,
+        5.8901,
+        6.6922,
+        6.7471
+      ],
+      [
+        1.4958,
+        0.0,
+        1.343,
+        2.5157,
+        2.8995,
+        2.5892,
+        1.4954,
+        2.3657,
+        4.4063,
+        5.2021,
+        5.3372
+      ],
+      [
+        2.507,
+        1.343,
+        0.0,
+        1.5013,
+        2.5266,
+        2.8801,
+        2.4482,
+        3.5578,
+        3.9148,
+        4.4725,
+        5.0837
+      ],
+      [
+        3.9116,
+        2.5157,
+        1.5013,
+        0.0,
+        1.5422,
+        2.5065,
+        2.9174,
+        4.1476,
+        2.5964,
+        2.9977,
+        3.9328
+      ],
+      [
+        4.3726,
+        2.8995,
+        2.5266,
+        1.5422,
+        0.0,
+        1.5328,
+        2.5182,
+        3.62,
+        1.5293,
+        2.5502,
+        2.5693
+      ],
+      [
+        3.9353,
+        2.5892,
+        2.8801,
+        2.5065,
+        1.5328,
+        0.0,
+        1.5149,
+        2.3953,
+        2.5302,
+        3.5256,
+        3.2032
+      ],
+      [
+        2.5493,
+        1.4954,
+        2.4482,
+        2.9174,
+        2.5182,
+        1.5149,
+        0.0,
+        1.2304,
+        3.8751,
+        4.857,
+        4.5346
+      ],
+      [
+        2.8031,
+        2.3657,
+        3.5578,
+        4.1476,
+        3.62,
+        2.3953,
+        1.2304,
+        0.0,
+        4.8596,
+        5.9072,
+        5.272
+      ],
+      [
+        5.8901,
+        4.4063,
+        3.9148,
+        2.5964,
+        1.5293,
+        2.5302,
+        3.8751,
+        4.8596,
+        0.0,
+        1.3445,
+        1.5102
+      ],
+      [
+        6.6922,
+        5.2021,
+        4.4725,
+        2.9977,
+        2.5502,
+        3.5256,
+        4.857,
+        5.9072,
+        1.3445,
+        0.0,
+        2.4686
+      ],
+      [
+        6.7471,
+        5.3372,
+        5.0837,
+        3.9328,
+        2.5693,
+        3.2032,
+        4.5346,
+        5.272,
+        1.5102,
+        2.4686,
+        0.0
+      ]
+    ],
+    "signed_volumes": {
+      "A": 2.481266109268337,
+      "B": -2.481266109268337
+    }
+  }
+}
