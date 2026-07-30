@@ -448,14 +448,19 @@ def main():
                   "meets the purity-controlled standard, on three independent "
                   "lines."),
             evidence="established",
-            citation=("Three independent 1971 papers: Russell & Hills, Science "
+            citation=("Convergent rather than proven by one study, and say so. "
+                      "Three independent 1971 groups: Russell & Hills, Science "
                       "172:1043; Friedman & Miller, Science 172:1044; Leitereg "
-                      "et al., Nature 230:455 (plus thresholds in J. Agric. "
-                      "Food Chem. 1971, 19, 785). Forced-choice discrimination "
-                      "confirmed by Laska & Teubner, Chem. Senses 1999, 24, 161. "
-                      "Independent modern line: Sato et al., Sci. Rep. 2015, 5, "
-                      "14073 (open access, PMC4566093), which covers carvone "
-                      "enantiomers alongside wine lactone."),
+                      "et al., Nature 230:455 -- their existence confirmed via "
+                      "Kvittingen et al. (read in full), the papers themselves "
+                      "still unread. Forced-choice discrimination in Laska & "
+                      "Teubner, Chem. Senses 1999, 24, 161 (abstract only, "
+                      "purity unstated). Mouse discrimination in Sato et al., "
+                      "Sci. Rep. 2015, 5, 14073 (read in full): supersensitive "
+                      "to both enantiomers, 10^10-fold discrimination loss in "
+                      "dorsal-receptor-ablated mice. Kvittingen also confirms "
+                      "the assignment (R)-(-) = spearmint, (S)-(+) = caraway, "
+                      "matching what the dataset's own IUPAC names give."),
         ),
         exhibit(
             "Nootkatone -- DEMOTED to a citation-drift case study",
@@ -482,19 +487,25 @@ def main():
                       "Perfum. Flavor. 1993, 18(6), 1-15 (unread, Cloudflare)"),
         ),
         exhibit(
-            "alpha-Pinene -- the human-validated pair",
+            "alpha-Pinene -- downgraded, do not call it validated",
             "CC1=CCC2CC1C2(C)C",
-            note=("The strongest evidence base of any exhibit. Laska & Teubner "
-                  "1999 (Chem. Senses 24:161) tested ten enantiomer pairs by "
-                  "forced-choice triangular test; alpha-pinene, carvone and "
-                  "limonene were the three humans could reliably discriminate. "
-                  "The benchmark labels differ sharply -- four labels against "
-                  "eight -- and the merge unions them. Held one tier below "
-                  "carvone because Laska's purity control could not be read "
-                  "(OUP full text inaccessible), so discrimination is "
-                  "panel-verified but ee is not."),
+            note=("Laska & Teubner 1999 (Chem. Senses 24:161) tested ten "
+                  "enantiomer pairs by forced-choice triangular test and found "
+                  "alpha-pinene, carvone and limonene discriminable. The "
+                  "benchmark labels differ sharply here -- four against eight -- "
+                  "and the merge unions them, which is real. But the perceptual "
+                  "claim is not safe. Laska's abstract states no enantiomeric "
+                  "purity and the full text is inaccessible; more damaging, one "
+                  "of its three positives is LIMONENE, and Kvittingen et al. "
+                  "later showed analytical-grade limonene enantiomers convey no "
+                  "distinct citrus character -- the earlier positives having come "
+                  "from trace impurities. If Laska's limonene result is an "
+                  "impurity artefact, its alpha-pinene result cannot be trusted "
+                  "either. Present the label disagreement, not a percept."),
+            confidence="medium",
             evidence="records_disagree",
-            citation="Laska & Teubner, Chem. Senses 1999, 24, 161 (abstract-level)",
+            citation=("Laska & Teubner, Chem. Senses 1999, 24, 161 -- abstract "
+                      "read directly, full text 403, purity not stated"),
         ),
         exhibit(
             "Geosmin -- petrichor, five labels against one",

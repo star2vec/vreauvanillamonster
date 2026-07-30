@@ -19,24 +19,75 @@ knows where the weight sits.
 
 ---
 
-## The structural risk, stated plainly
+## The ceiling's four load-bearing claims — VERIFIED, with two corrections
 
-**All of our numbers are tier A. Almost none of our literature is above tier C.**
+I read these sources myself rather than re-asking an agent. All four survive. Two produced
+corrections that change what the page may say.
 
-That was survivable when the audit was the headline, because the audit is entirely tier A.
-It is *not* obviously survivable now that the ceiling leads, because the ceiling's second leg
-— the claim that the best-evidenced enantiomer differences are potency differences — is
-built almost entirely from agent reports I have not personally checked.
+### 1. Wine lactone — HOLDS (tier B, with a purity caveat)
+Sato et al., *Sci. Rep.* **5**:14073 (2015), DOI 10.1038/srep14073 — open access, read.
+Verbatim: *"The 10⁸-fold difference in sensitivity of ΔD mice to (−)- and (+)-wine lactones
+was the same as that observed in humans."* Table 1 gives humans "ca. 10⁸" and ΔD mice
+1.0 × 10⁸. Potent isomer is **(−)-wine lactone, (3S,3aS,7aR)**.
+**Caveats to state:** purity was ">99.9% with respect to the angle of optical rotation" —
+*not* chiral GC, so weaker than our own stated standard. It is a mouse-genetics study about
+hierarchical odour coding, and the human 10⁸ figure is second-hand within it.
 
-Four claims carry that leg. If any is wrong, the headline weakens:
+### 2. Linalool — HOLDS (tier B, read in full)
+Reglitz, Stein, Ackermann, Heigl, Brass, Ampenberger, Zarnkow & Steinhaus,
+*BrewingScience* **76** (Jul/Aug 2023), 92–96, DOI 10.23763/BrSc23-07reglitz.
+Orthonasal detection thresholds: **(R) 0.82 vs (S) 8.3 µg/kg in water** (10.1×), **6.5 vs 53
+in beer** (8.2×). Their words: *"only 8 to 10 times lower … and not 80 times as previously
+assumed."*
+Purity control is genuinely exemplary: (S) isolated from the racemate by semi-preparative
+chiral HPLC to **>99.9% ee**, commercial (R) at **98.7%**, both confirmed by chiral GC-MS on
+a β-cyclodextrin column, then **both screened by chiral GC-O with AEDA showing every
+impurity — including the opposite enantiomer — at an FD factor at least 100× below the
+target.** 17 trained assessors, ASTM E679 3-AFC ascending series.
+The dead 80× figure traces to **Jagella 1999**, a TU Munich dissertation, and Reglitz note
+the air measurements *"were only performed by a single assessor."*
+**CORRECTION:** the *"odour qualities of (R)- and (S)-linalool are very similar"* quote is
+real, but it appears in their **Introduction as accepted background**, not as their own
+experimental result — they measured thresholds, not quality. Attribute it that way.
 
-1. Wine lactone spans >10⁷ in detection threshold across stereoisomers
-2. Linalool is 8–10× in potency with qualities reported "very similar"
-3. Carvone's spearmint/caraway quality difference is real and purity-controlled
-4. Limonene's orange/lemon quality difference is refuted
+### 3. Carvone — HOLDS by convergence, but no single purity-controlled human study
+Three independent lines, none of which I have read at source:
+Kvittingen et al. (read in full) confirms *"three different groups independently investigated
+the odor sensation for the enantiomers of carvone"* in 1971, and confirms the assignment
+**(R)-(−)-carvone = spearmint, (S)-(+)-carvone = caraway** — matching what I derived
+independently from the dataset's own IUPAC names.
+Sato et al. 2015 (read) reports mice supersensitive to both enantiomers (10⁻¹⁹ and 10⁻¹⁷ w/w)
+and a 10¹⁰-fold reduction in discrimination in ΔD mice.
+Laska & Teubner 1999 (abstract only) lists carvone among three pairs humans discriminated.
+**State it as convergent evidence, not as one clean study.** The 1971 papers remain unread.
 
-**[ACTION] These four must be promoted to tier B before the ceiling can headline the page.**
-That means opening the primary sources myself, not re-asking an agent.
+### 4. Limonene — HOLDS, and this is the correction that matters most
+Kvittingen, Sjursnes & Schmid, *J. Chem. Educ.*, DOI 10.1021/acs.jchemed.1c00363 — read in
+full. Table 1: (R)-(+)-limonene **technical grade 50%** orange/mandarin/clementine,
+**analytical grade 13%**. 48 participants in test 1, 49 in test 2. Verbatim conclusions:
+*"(S)-(−)-Limonene does not convey lemon odor."* and *"(R)-(+)-Limonene does not convey
+orange odor."* Friedman & Miller *Science* 1971 confirmed as the origin, and the citral
+explanation is there via Sell: their (S)-limonene was extracted from lemons, but citrus
+produces (R)-limonene, so the lemon percept was contamination.
+
+> **CORRECTION — the variable was CHEMICAL purity, not enantiomeric purity.** Table 2 shows
+> **both** (R)-limonene samples at **>99.9% ee**. What differed was total limonene content:
+> 92.1% technical against 99.2% analytical, i.e. ~7.9% versus 0.8% impurities. And those
+> impurities were other orange-oil components — *"several of the peaks from the technical
+> grade (R)-(+)-limonene correspond to peaks in orange oil."*
+>
+> So "with >99.9% ee material only 13%" is *true but misleading*, because both grades were
+> >99.9% ee. **Never phrase it as an enantiomeric-purity effect.** The correct phrasing:
+> same enantiomer, same enantiomeric purity, ten times fewer trace impurities, and the
+> orange association collapses from 50% to 13%.
+
+### Consequence: α-pinene must be downgraded
+Kvittingen also reports Sell's observation that *"the purer the limonene is, the less odor it
+has."* But Laska & Teubner found limonene **discriminable** — with purity nowhere stated in
+the abstract. If Laska's limonene positive is an impurity artefact, Laska is weakened as a
+source generally, and Laska is the *only* support for our α-pinene exhibit.
+**[ACTION] α-pinene drops from "panel-verified" to "records disagree, percept unverified"**
+unless the Laska full text turns out to state enantiomeric purity.
 
 ---
 
@@ -108,11 +159,8 @@ Run `python audit/audit.py`, `python audit/assets.py`,
 
 | Claim | Reported source | Load-bearing for |
 |---|---|---|
-| Limonene: 50% vs 13% orange attribution by purity grade, >99.9% ee, 48+49 participants | Kvittingen, Sjursnes & Schmid 2021, *J. Chem. Educ.*, DOI 10.1021/acs.jchemed.1c00363 (agent read OA full text) | **§15, the single best number on the page** |
-| Carvone replicated three times in 1971 | Russell & Hills *Science* 172:1043; Friedman & Miller *Science* 172:1044; Leitereg et al. *Nature* 230:455 | lead exhibit, ceiling leg 2 |
-| Laska & Teubner 1999: 10 pairs, α-pinene/carvone/limonene discriminated; menthol, 2-butanol and 7 others not | *Chem. Senses* 24, 161. **Agent had abstract-level access only** | 2-butanol counter-exhibit, α-pinene exhibit, menthol demotion |
-| Linalool 8–10× threshold, (S) isolated to >99.9% ee, chiral GC-O impurity screening, 17 assessors | Reglitz et al. 2023, *BrewingScience* 76, 92–97 | ceiling leg 2 |
-| Wine lactone: 10⁸-fold sensitivity difference in mice matching humans | Sato et al. 2015, *Sci. Rep.* 5, 14073 (open access) | ceiling leg 2 |
+| Carvone replicated three times in 1971 | Russell & Hills *Science* 172:1043; Friedman & Miller *Science* 172:1044; Leitereg et al. *Nature* 230:455. **Kvittingen confirms three groups existed; the papers themselves remain unread** | lead exhibit |
+| Laska & Teubner 1999: 10 pairs; α-pinene/carvone/limonene discriminated, menthol/fenchone/rose oxide/camphor/α-terpineol/β-citronellol/2-butanol not | *Chem. Senses* 24, 161. **I read the abstract myself; full text 403. Purity NOT stated in the abstract** | 2-butanol counter-exhibit, α-pinene exhibit, menthol demotion |
 | Nootkatone's (−) sample was total synthesis from (+)-sabinene, no quantified ee | Haring et al. 1972, *J. Agric. Food Chem.* | nootkatone demotion, §18 |
 | Lee et al. 2023 contains zero occurrences of stereochemistry/chiral/enantiomer/isomer | PMC11898014, agent searched the text | novelty framing, §9/§10 |
 | Issues are disabled on `BioMachineLearning/openpom` (`has_issues: false`) | GitHub API | novelty framing |

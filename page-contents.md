@@ -256,15 +256,23 @@ of the 74 are annotation noise, not destroyed signal.
 **Linalool returns here as the bookend, and it is the best teaching case we have**, because
 it splits the two claims people conflate:
 
-- **Potency: established.** 8–10× threshold difference, confirmed independently 1997 and
-  2023. Reglitz et al. 2023 (*BrewingScience* 76, 92–97, DOI 10.23763/BrSc23-07reglitz)
-  isolated (S) from the racemate by chiral HPLC to >99.9% ee and screened both by chiral
-  GC-O confirming every impurity ≥100× below target — exactly the control Kvittingen's
-  limonene critique demands. 17 assessors, ASTM E679 forced choice.
+- **Potency: established, verified at source.** Reglitz et al. 2023 (*BrewingScience* **76**,
+  92–96, DOI 10.23763/BrSc23-07reglitz — read in full): detection thresholds **0.82 vs 8.3
+  µg/kg in water** and **6.5 vs 53 in beer**, so 10.1× and 8.2×. (S) isolated from the
+  racemate by chiral HPLC to **>99.9% ee**, commercial (R) at 98.7%, both confirmed by chiral
+  GC-MS, then both screened by **chiral GC-O with AEDA showing every impurity at an FD factor
+  ≥100× below target** — exactly the control Kvittingen's critique demands. 17 trained
+  assessors, ASTM E679.
 - **Quality: not established.** The famous lavender/woody versus sweet/petitgrain pair
-  traces to Ohloff & Klein 1962, a stereochemistry paper predating chiral GC by 25 years.
-  Steinhaus's group, holding the cleanest material anyone has had, reports the two
-  qualities are "very similar."
+  traces to Ohloff & Klein 1962, a stereochemistry paper predating chiral GC by 25 years and
+  which I have not been able to read.
+  **[ATTRIBUTION FIX]** The *"odour qualities of (R)- and (S)-linalool are very similar"*
+  line is real and is Reglitz et al.'s — but it sits in their **Introduction as accepted
+  background**, not as their finding. They measured thresholds, not quality. Write it as
+  "Steinhaus's group describe the qualities as very similar," never as a measured result.
+- **Bonus, fully verified:** the widely quoted **80×** ratio is dead. It traces to Jagella
+  1999, a TU Munich dissertation, and Reglitz note the air measurements *"were only performed
+  by a single assessor."*
 
 **Two details about how evidence decays, both usable:**
 
@@ -279,10 +287,27 @@ The widely quoted **80×** linalool ratio is dead: single assessor, unpublished 
 dissertation, explicitly disproved by Reglitz et al.
 
 ### 15. The limonene trap
-The correctness trap, and the best single number on the page: with technical-grade limonene,
-**50%** of participants called (R)-(+) "orange"; with >99.9% ee material, **13%**. Same
-molecule, same question, purity the only variable.
-Kvittingen, Sjursnes & Schmid 2021, DOI 10.1021/acs.jchemed.1c00363.
+The correctness trap, and the best single number on the page: with **technical-grade**
+limonene, **50%** of participants called (R)-(+) "orange"; with **analytical-grade**, **13%**.
+48 and 49 participants. Kvittingen, Sjursnes & Schmid, *J. Chem. Educ.*,
+DOI 10.1021/acs.jchemed.1c00363 — read in full, verified.
+
+> **PHRASING WARNING — I had this wrong and it was actively misleading.** The variable is
+> **chemical** purity, **not enantiomeric** purity. Both (R)-limonene samples were **>99.9%
+> ee**; what differed was total limonene content, 92.1% versus 99.2%, so roughly 7.9%
+> against 0.8% impurities. And those impurities were other orange-oil components — several
+> technical-grade peaks match peaks in orange oil directly.
+>
+> **Never write "with >99.9% ee material only 13%."** True, but it implies an enantiomeric
+> effect and there is none. Correct phrasing: *same enantiomer, same enantiomeric purity, ten
+> times fewer trace impurities — and the orange association collapses from 50% to 13%.*
+>
+> This is a better fact than the one I thought we had. The percept was never coming from the
+> limonene at all.
+
+Their verbatim conclusions are quotable: *"(S)-(−)-Limonene does not convey lemon odor."* and
+*"(R)-(+)-Limonene does not convey orange odor."* Also usable: they report Sell's observation
+that the purer limonene is, the less odour it has.
 
 **[REC] Two bars. That is the entire chart.** Resist elaborating it.
 
@@ -308,12 +333,12 @@ Then the pattern in the literature, once quality and potency are separated:
 
 | Pair | Difference | Kind | Evidence |
 |---|---|---|---|
-| Wine lactone stereoisomers | >10⁷ in threshold | potency | strong |
-| Linalool | 8–10× threshold, qualities "very similar" | potency | strong |
-| Androstenone C₁₉-steroids | odorous vs essentially odourless | potency | thin, unreplicated |
-| Carvone | spearmint vs caraway | **quality** | strong |
-| Limonene | orange vs lemon | quality | **refuted** |
-| Nootkatone | grapefruit vs terpenic | quality | confounded |
+| Wine lactone stereoisomers | **10⁸** in sensitivity, mice matching humans | potency | verified at source; purity by optical rotation only |
+| Linalool | 10.1× in water, 8.2× in beer; qualities described as very similar | potency | verified at source, exemplary purity control |
+| Androstenone C₁₉-steroids | odorous vs essentially odourless | potency | thin, unreplicated, abstract-only |
+| Carvone | spearmint vs caraway | **quality** | convergent: 3 × 1971 + Laska + Sato 2015 |
+| Limonene | orange vs lemon | quality | **refuted, verified at source** |
+| Nootkatone | grapefruit vs terpenic | quality | confounded (impurity) |
 
 Carvone is the *outlier*, not the pattern. For every pair whose difference is purely
 potency, the benchmark cannot express it — with stereochemistry restored **and** perfect
