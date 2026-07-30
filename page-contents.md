@@ -46,27 +46,41 @@ mirror-image forms.
 **[REC] Lead with linalool, because a cola formula plausibly contains *both* of its
 enantiomers at once** — S-(+) from coriander (~88% S), R-(−) from lavender and neroli.
 
-**[REC] The promissory opening.** Title and first paragraph carry the *audit* — concrete,
-countable, verifiable. Then one sentence promises the ceiling without arguing it, roughly:
-*"and the deeper problem isn't that the data was damaged — it's that the format was never
-able to hold what chirality actually does. I'll come back to that."*
+**DECIDED: the ceiling leads.** The audit is narrower and more intimidating than it is
+compelling — one CSV in one subfield reads as niche, however solid it is — while the ceiling
+is an idea, and ideas travel. The audit then lands mid-piece as the *aha* that makes the
+ceiling concrete. Title carries the ceiling; subtitle can carry the audit.
 
-Then it is kept in §16, where the reader has already accepted the numbers.
+**This does not change the running order.** Acts I–IV stay exactly as below. What changes is
+the opening frame, the title, and where the emphasis sits — which is cheap.
 
-Why this beats leading with either one alone:
+Three amendments, without which leading with the ceiling walks into the objection I raised
+against it:
 
-- A reader who leaves at 20% takes away the audit, which is correct and shareable.
-- A reader who finishes gets the ceiling as an earned payoff.
-- The burden of proof sits on the audit, which is discharged mechanically by running one
-  script, while the ceiling arrives only after the numbers have bought trust.
-- A critic attacking the ceiling has, by that point, already conceded the audit.
-- Rhetorically decisive: an argument the reader *arrives at* feels like their own
-  conclusion; an argument asserted up front feels like a thesis to resist. The ceiling is
-  exactly the kind of claim that benefits from being earned rather than declared.
+**(a) Open with the ceiling's *question*, not its thesis.** My earlier worry — that a
+ceiling-first opening is too abstract for a non-specialist — only bites if we *assert* the
+proposition ("binary label spaces cannot express potency"). Open instead with the puzzle it
+answers, and we get breadth and concreteness at once. Something in the register of:
 
-The one real cost is that the title cannot also announce a representation-learning
-contribution. **[REC] Recover that in the subtitle** — title carries the audit, subtitle
-carries the ceiling.
+> Everyone knows chirality is the hard case for molecular machine learning. The standard
+> story is that models cannot see it. That story is true — and it is not the problem.
+
+Tension, no abstraction, and the reader is oriented in three sentences.
+
+**(b) Headline the *structural* leg, never a count.** Leg 1 — the label space is `{0,1}^138`
+with no intensity dimension — is a fact about a schema, not an estimate, so it cannot shrink
+under scrutiny. Leg 2 (the literature pattern) supports it. I have now revised a ceiling
+number downward twice; if the headline contained one, that fragility would be load-bearing.
+**All counts belong to the audit.**
+
+**(c) Move the scope pre-emption into the first three paragraphs.** Audit-first, the
+"intensity was out of scope" objection lands on a late section. Ceiling-first, it lands on
+the thesis, so it must be met immediately and in its strong form — see §16.
+
+What we give up: the reader who leaves at 20% now takes away an argument rather than a
+verified number, and a critic can attack the thesis before conceding anything. That is a
+real cost and it is being accepted knowingly, in exchange for a piece people actually want
+to read.
 
 Corrections to carry, both of which are errors I made earlier and had to fix:
 - Citrus **peel** oil is **not** rich in linalool — 0.03–1.6% against 38–91% limonene.
@@ -312,18 +326,26 @@ stronger."
    for 4,137 of 4,626 stimuli spanning four orders of magnitude — 100%, 10%, 1%, 0.1%,
    0.01% — plus solvent for 1,850. The benchmark keeps **none** of it. So descriptors
    elicited at 0.01% and at 100% are treated as commensurable.
-4. **Descriptions merged across concentration (real but modest — do not inflate).** 226 raw
-   Leffingwell records qualify a descriptor by concentration. In a *crude approximation* of
-   the curation logic, ~37 produce label vectors drawing from both the neat and the diluted
-   clause. Vivid examples: *"Strong, offensive fecal odor; diluted — floral, animal,
-   overripe fruit"* becomes a row asserting `floral` and `fruity`. **Caveat: my
-   approximation produced obvious false positives** (it matched `odor` → `odorless`), so
-   **no number here is quotable until the real `merger_root_dict` from cell 35 is applied.**
-   Treat as illustration, not as a count.
+4. ~~Descriptions merged across concentration.~~ **DROPPED — measured and negligible.**
+   Re-run with the real curation logic (`audit/concentration_check.py`, which reproduces
+   `curated_leffingwell.csv` to **99.97%**, 3,509 of 3,510 rows exact): dilution-only
+   information lost to the semicolon truncation affects **23** records, and neat/diluted
+   descriptors merged into one vector affects **8**. Out of 3,510. My crude estimate said
+   ~37 and I had loosely described 221 records as affected; both were wrong.
 
-**[REC] Present legs 1–3 as the argument and leg 4 as illustration.** I earlier described
-this as a second leg of equal weight to the stereochemistry finding; that was overstated
-and I am correcting it. 37-ish is an order of magnitude below 534.
+   Worth recording *why* it is small, because it is a point in the curation's favour: the
+   pipeline unions text-derived descriptors with a pre-existing `Labels` column that
+   Sanchez-Lengeling et al. had already cleaned from the *full* description, so most of what
+   the truncation drops is recovered from there.
+
+   **[REC] Keep at most one example as colour, never a count.** *"Nearly odorless if pure;
+   creamy, vanilla, sweet-tart taste in dilution"* losing `creamy`, `vanilla` and `sweet` is
+   a nice illustration of the format having nowhere to put a concentration qualifier. It is
+   not evidence of scale.
+
+**[REC] The ceiling rests on legs 1–3 only.** This is the second time I have had to revise
+a ceiling number downward, which is exactly why the headline claim must be the *structural*
+one — see below.
 
 **The objection you will get, and the answer.** *"Intensity was out of scope — the paper
 predicts descriptors, not thresholds, so of course the format excludes it."* That objection
@@ -400,17 +422,21 @@ Five widgets would read as a demo reel. Three makes the page feel alive.
 
 ## Open questions
 
-- ~~Is §16 the headline, or the closing act?~~ **Resolved via the promissory opening
-  (§1):** audit in the title, ceiling in the subtitle, promised in the first paragraph and
-  paid off in §16. Not a compromise — see the reasoning in §1.
+- ~~Is §16 the headline, or the closing act?~~ **Resolved: the ceiling leads.** See §1 for
+  the three amendments that make it work — open with the question not the thesis, headline
+  the structural leg not a count, and move the scope pre-emption to the top.
 
   Two definitions worth keeping straight, since the whole call turned on them. **The audit
   is a measurement**: 534 fusions, 74 conflicting enantiomer pairs, every row reconstructed
   from source, falsifiable by running one command. **The ceiling is an interpretation**: the
   138-label format has no intensity dimension, and the best-evidenced enantiomer differences
-  are potency differences, so most of the phenomenon was never expressible. Its premises are
-  checkable but its conclusion is an inference. Measurements and interpretations carry
-  different burdens of proof, which is why the measurement goes first.
+  are potency differences, so most of the phenomenon was never expressible. Checkable
+  premises, inferred conclusion. They carry different burdens of proof, which is why the
+  ceiling must lead with its structural claim and leave every number to the audit.
+- ~~Re-run leg 4 of §16 with the real merger dict.~~ **Done: 23 + 8 of 3,510, so the leg is
+  dropped.** `audit/concentration_check.py` reproduces the Leffingwell curation to 99.97%,
+  which is worth keeping on its own terms — it confirms we understand that pipeline end to
+  end.
 - **[YOU]** Is §18 ("what died") page-visible or repo-only? I lean visible — strongest
   signal this wasn't a weekend's work — but it is your name on the self-criticism.
 - Lee et al. supplementary PDF still ungrepped. Until it is, the page cannot claim the
