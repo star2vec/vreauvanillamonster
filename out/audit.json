@@ -66,6 +66,13 @@
     "fusions_containing_an_enantiomer_pair": 87,
     "enantiomer_pairs_with_conflicting_labels": 74,
     "fusions_diastereomer_or_EZ_only": 447,
+    "specification_breakdown": {
+      "note": "How much of the collapse is an unambiguous loss versus a distinction the source never resolved. The strictest reading of the headline count is `all_members_specified`.",
+      "all_members_specified": 97,
+      "mixes_unspecified_with_resolved": 392,
+      "all_members_partly_unspecified": 45
+    },
+    "enantiomer_conflicts_both_members_fully_specified": 71,
     "why_it_matters": "A 2D graph model receives an identical tensor for all 534 fusions. A distance-based 3D model is provably blind only to the enantiomer fusions -- diastereomers and E/Z isomers have different distance matrices and are separable. So the parity-specific claim rests on the enantiomer count, not the total.",
     "enantiomer_conflict_skeletons": [
       "C=C(C)C1CC=C(C)C(=O)C1",

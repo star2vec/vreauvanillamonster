@@ -16,13 +16,18 @@ import json
 import os
 import urllib.request
 from collections import defaultdict
+from pathlib import Path
 
 import pandas as pd
 from rdkit import Chem, RDLogger
 
 RDLogger.DisableLog("rdApp.*")
 
-DATA = "data"
+# Anchored to this file, not the working directory, so the script runs correctly
+# from anywhere and the cache lands where .gitignore expects it.
+HERE = Path(__file__).resolve().parent
+DATA = str(HERE / "data")
+OUT = HERE.parent / "out" / "audit.json"
 OPENPOM = ("https://raw.githubusercontent.com/BioMachineLearning/openpom/main/"
            "openpom/data/curated_datasets/")
 PYRFUME = "https://raw.githubusercontent.com/pyrfume/pyrfume-data/main/goodscents/"
@@ -171,6 +176,7 @@ def main():
     print("\n[4] The collapse attributable to the merge")
     per_isomer = defaultdict(lambda: defaultdict(set))
     n_source_rows = defaultdict(int)
+    source_smiles = {}      # canonical isomer -> the SMILES as written in the source
     for frame, desc_col in ((gs, "Updated_Desc_v2"), (lf, "Updated_Desc")):
         for smiles, desc in zip(frame.IsomericSMILES, frame[desc_col]):
             skeleton, isomer = flat(smiles), canon(smiles)
@@ -179,6 +185,7 @@ def main():
                     t for t in str(desc).split(";") if t
                 }
                 n_source_rows[skeleton] += 1
+                source_smiles.setdefault(isomer, smiles)
 
     fused = {k: v for k, v in per_isomer.items() if len(v) > 1}
     conflicting = {k: v for k, v in fused.items()
@@ -232,21 +239,63 @@ def main():
     # ------------------------------- which fusions does the theorem protect?
     print("\n[5b] Enantiomer fusions vs diastereomer fusions")
     enantiomer_fusions, enantiomer_conflicts, diastereomer_only = [], [], []
+    enantiomer_pairs_of = {}
     for skeleton, isomers in fused.items():
         keys = list(isomers)
         pairs = [(a, b) for i, a in enumerate(keys) for b in keys[i + 1:]
                  if mirror(a) == b]
+        enantiomer_pairs_of[skeleton] = pairs
         if not pairs:
             diastereomer_only.append(skeleton)
             continue
         enantiomer_fusions.append(skeleton)
         if any(isomers[a] != isomers[b] for a, b in pairs):
             enantiomer_conflicts.append(skeleton)
+    # A sceptic's first objection is that some fused records were never resolved in
+    # the source anyway -- a racemate, or an undifferentiated trade entry -- so the
+    # merge cannot be blamed for losing a distinction nobody recorded. Answer it
+    # with a number instead of a paragraph: split every fusion by whether all of
+    # its members are fully stereo-specified.
+    def unspecified_centres(smiles):
+        m = Chem.MolFromSmiles(smiles)
+        if m is None:
+            return 0
+        return sum(1 for e in Chem.FindPotentialStereo(m)
+                   if str(e.specified) != "Specified")
+
+    fully_specified, partly, wholly_unspecified = [], [], []
+    for skeleton, isomers in fused.items():
+        vague = [c for c in isomers if unspecified_centres(source_smiles[c])]
+        if not vague:
+            fully_specified.append(skeleton)
+        elif len(vague) == len(isomers):
+            wholly_unspecified.append(skeleton)
+        else:
+            partly.append(skeleton)
+
+    strict_enantiomer_conflicts = [
+        s for s in enantiomer_conflicts
+        if all(not unspecified_centres(source_smiles[a])
+               and not unspecified_centres(source_smiles[b])
+               for a, b in enantiomer_pairs_of[s]
+               if per_isomer[s][a] != per_isomer[s][b])
+    ]
+
     out["parity"] = {
         "total_fusions": len(fused),
         "fusions_containing_an_enantiomer_pair": len(enantiomer_fusions),
         "enantiomer_pairs_with_conflicting_labels": len(enantiomer_conflicts),
         "fusions_diastereomer_or_EZ_only": len(diastereomer_only),
+        "specification_breakdown": {
+            "note": ("How much of the collapse is an unambiguous loss versus a "
+                     "distinction the source never resolved. The strictest "
+                     "reading of the headline count is `all_members_specified`."),
+            "all_members_specified": len(fully_specified),
+            "mixes_unspecified_with_resolved": len(partly),
+            "all_members_partly_unspecified": len(wholly_unspecified),
+        },
+        "enantiomer_conflicts_both_members_fully_specified":
+            len(strict_enantiomer_conflicts),
         "why_it_matters": (
             "A 2D graph model receives an identical tensor for all 534 fusions. "
             "A distance-based 3D model is provably blind only to the "
@@ -534,9 +583,10 @@ def main():
         ),
     ]
 
-    with open("audit.json", "w") as f:
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    with open(OUT, "w") as f:
         json.dump(out, f, indent=2, sort_keys=False)
-    print("\nWrote audit.json")
+    print(f"\nWrote {OUT}")
 
 
 if __name__ == "__main__":

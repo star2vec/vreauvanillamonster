@@ -30,13 +30,23 @@ repository directory and that still carry stereochemistry.
 | Stereoisomers absorbed into those rows | 1,258 |
 | Fusions whose source records carried conflicting labels | 508 |
 | Fusions of a true **enantiomer** pair | 87 |
-| …of those, with conflicting labels | **74** |
+| …of those, with conflicting labels | 74 |
+| …with both members fully stereo-specified | **71** |
 | Fusions that are diastereomer or E/Z only | 447 |
 
-That last split matters. A 2D graph model is blind to all 534. A distance-based 3D model
+That split matters. A 2D graph model is blind to all 534. A distance-based 3D model
 recovers the 447 — diastereomers have genuinely different distance geometries — and
-remains provably blind to the 87. Only a parity-odd feature reaches the 74 where the
+remains provably blind to the 87. Only a parity-odd feature reaches the rows where the
 labels actually disagree.
+
+The obvious objection is that some fused records were never resolved in the source
+anyway — a racemate, or an undifferentiated trade entry — so the merge cannot be blamed
+for losing a distinction nobody recorded. That objection gets a number rather than a
+paragraph. Of the 534 fusions, **97** have every member fully stereo-specified, 392 mix an
+unspecified record with resolved isomers, and 45 are partly unspecified throughout. The
+strictest reading of the headline is therefore 97, not 534. The parity-critical count
+barely moves under the same scrutiny: 71 of the 74 have both members of the conflicting
+enantiomer pair fully resolved.
 
 ## Reproduce it
 
