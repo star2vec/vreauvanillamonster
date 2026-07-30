@@ -36,19 +36,33 @@ Flavour is mostly smell. Cola flavour is a blend of citrus, cinnamon, vanilla an
 oils. Those oils are mixtures of specific aroma molecules — and some of those molecules
 come in two mirror-image forms.
 
-**[YOU] The hook has a seam I want to flag rather than paper over.** Our lead exhibit is
-carvone (spearmint vs caraway), which is *not* a cola note. So the cola framing gets the
-reader in and then hands off to an unrelated molecule. Two options:
+**[REC] Resolved: use linalool in the hook, carvone as the lead exhibit, linalool again as
+the bookend in Act IV.** Vetting came back DISPUTED, which turns out to be more useful than
+a pass.
 
-- **(a)** Use cola only to establish "flavour is smell," then pivot: "the cleanest known
-  example of what I'm about to describe is a molecule in spearmint."
-- **(b) [REC, conditional]** Make the hook load-bearing by leading the exhibit with
-  **linalool**, which is genuinely a citrus and coriander oil component *and* is already
-  in our enantiomer-conflict set with disagreeing labels. Then the hook pays off directly.
+The honest framing, which is *stronger* than the one I first proposed and which corrects a
+factual error in it:
 
-(b) is better if linalool survives the same purity-controlled scrutiny that killed
-nootkatone. Unvetted so far. If it fails, fall back to (a) — carvone stays the lead
-either way, since it is the only exhibit meeting the evidence bar.
+- Citrus **peel** oil is **not** rich in linalool — 0.03–1.6% against 38–91% limonene. Do
+  not say it is.
+- But in *Citrus sudachi* peel oil, **(S)-(+)-linalool has the highest odour-unit value of
+  all 26 components** — the only one above 1.0 — with (R)-(−) second, both far above
+  limonene. Trace abundance, largest single contribution to the smell. That is the good
+  line, and it is purity-controlled and quantitative.
+- Citrus **flower and leaf** oils genuinely are linalool-rich: neroli 28–40% (R-dominant),
+  orange blossom 15–32% (S-dominant), petitgrain >27% (S-dominant).
+- So: **a cola formula plausibly contains both linalool enantiomers at once** — S-(+) from
+  coriander (~88% S), R-(−) from lavender and neroli. The hook pays off, and it pays off
+  into the quality-versus-potency distinction rather than into a descriptor claim we cannot
+  support.
+
+**Caveat to carry:** the widely reproduced "7X formula" provenance (Merory 1960, the
+Pemberton notebook) is itself folklore-grade. If we name specific oils, hedge the source.
+Coriander/cinnamon/citrus/vanilla as the cola profile is uncontroversial in the flavour
+literature; the exact recipe is not.
+
+Carvone stays the lead exhibit regardless, since it is the only one meeting the evidence
+bar *and* the only one whose difference is a quality difference a reader can imagine.
 
 ### 2. Two molecules, one difference
 (R)-carvone smells of spearmint; (S)-carvone of caraway. Same atoms, same bonds, same
@@ -155,6 +169,9 @@ The spine of the act. Each one is worse than the last:
    the survivor.
 4. **The model** — the featurizer has no stereo features, so even a fixed dataset changes
    nothing.
+There is a **fifth** fault, and it is probably the deepest, but it cannot be stated here —
+it depends on a distinction Act IV has to establish first. Forward-reference it and pay it
+off in §16.
 
 **[REC] Fault 2 leads the act, not fault 3.** It is more surprising, more specific, and
 more mechanistically satisfying: the reader expects a modelling mistake and gets a regex.
@@ -192,6 +209,65 @@ different is a separate question with much patchier evidence. Of our exhibits, c
 the only one meeting a purity-controlled standard. And (R)/(S)-2-butanol have different
 labels in the benchmark although Laska & Teubner 1999 showed humans **cannot** discriminate
 them. So some of the 74 are annotation noise, not destroyed signal.
+
+**[REC] Linalool returns here as the bookend, and it is the best teaching case we have**,
+because it splits cleanly into the two claims people conflate:
+
+- **Potency: established.** 8–10× threshold difference, confirmed independently in 1997 and
+  2023. Reglitz et al. 2023 (*BrewingScience* 76, 92–97, DOI 10.23763/BrSc23-07reglitz)
+  isolated (S) from the racemate by chiral HPLC to >99.9% ee and screened both enantiomers
+  by chiral GC-O to confirm every impurity sat ≥100× below target — the exact control
+  Kvittingen's limonene critique demands. 17 assessors, ASTM E679 forced choice.
+- **Quality: not established.** The famous lavender/woody versus sweet/petitgrain pair
+  traces to Ohloff & Klein 1962, a stereochemistry paper predating chiral GC by 25 years,
+  whose purity could not have been quantified. Steinhaus's group, holding the cleanest
+  material anyone has had, states the two qualities are "very similar."
+
+**Two details worth using, both about how evidence decays:**
+
+The single purity-controlled panel test of linalool *quality* (Padrayuttawat et al. 1997)
+also reports discriminating **limonene** enantiomers at p<0.001 — at 89%/94% purity, exactly
+the regime Kvittingen proved generates a false positive. A paper that confirms a claim we
+know to be wrong, in the same table, by the same method, at the same purity. That is a
+better argument about evidence quality than any assertion we could write. Its linalool (S)
+sample was ~80% ee, so at the test concentration the ~10% (R) contamination — nine times
+more potent — sat far above (R)'s own threshold. The panel may have been discriminating
+"S plus suprathreshold R" from "essentially pure R."
+
+And the widely cited **80×** linalool threshold ratio is dead: it traces to a single-assessor
+measurement in an unpublished 1999 dissertation, and Reglitz et al. explicitly disproved it.
+If we ever see 80× quoted, that is where it came from.
+
+**[REC] This section hands directly to §16.**
+
+### 16. Fault 5: the labels have no volume knob
+**[REC] New, and I think it is the strongest thing on the page. It closes the argument.**
+
+Every one of the 138 labels is a binary present/absent descriptor. The vocabulary has **no
+intensity dimension at all**. And once you separate quality from potency, the pattern in the
+literature is stark — the best-evidenced enantiomer differences are almost all potency:
+
+| Pair | Difference | Kind | Evidence |
+|---|---|---|---|
+| Wine lactone stereoisomers | >10⁷ in detection threshold | potency | strong |
+| Linalool | 8–10× threshold, qualities "very similar" | potency | strong |
+| Androstenone C₁₉-steroids | odorous vs essentially odourless | potency | thin, unreplicated |
+| Carvone | spearmint vs caraway | **quality** | strong |
+| Limonene | orange vs lemon | quality | **refuted** |
+| Nootkatone | grapefruit vs terpenic | quality | confounded |
+
+So for every pair whose difference is purely potency, the benchmark is **structurally
+incapable of expressing it** — even with stereochemistry restored *and* perfect labels. A
+binary descriptor vector can say `odorless`, but it cannot say "the same smell, nine times
+stronger."
+
+That is not a data bug or a model bug. It is a mismatch between what the field measures
+most reliably and what its label format can encode. And it reframes everything above: the
+problem is not only that evidence was destroyed three times over, but that the evidence
+which survives scrutiny best is of a kind the benchmark was never able to hold.
+
+**[REC] End the argument here, before the experiment.** This is the strongest note we have
+and the experiment should read as an appendix to it rather than the climax.
 
 ### 15. The limonene trap
 The correctness trap, and the best single number on the page: with technical-grade
@@ -266,10 +342,20 @@ page feels alive; five would make it feel like a demo reel.
 
 ## Open questions blocking content
 
-- **[YOU]** Hook: linalool (needs vetting) or pivot-to-carvone?
+- ~~Hook: linalool or pivot-to-carvone?~~ **Resolved**: linalool in the hook, carvone as
+  lead exhibit, linalool as the Act IV bookend. See §1 and §14.
 - Lee et al. supplementary PDF still ungrepped. Until it is, the page cannot claim the
   flagship paper is silent on stereochemistry. Affects §9 and §10 wording only.
-- Experiment results unknown, so §16 is a question with no answer yet.
-- **[YOU]** Should §17 ("what died") be visible on the page, or repo-only? I lean visible
+- Experiment results unknown, so §17 is a question with no answer yet.
+- **[YOU]** Should §18 ("what died") be visible on the page, or repo-only? I lean visible
   — it is the strongest signal that this wasn't done in a weekend — but it is your name on
   the self-criticism.
+- **[YOU]** Does fault 5 (§16) become the headline claim of the whole piece? It is the most
+  original thing here and the least dependent on anyone's numbers being right. Arguing for
+  it: it reframes the audit from "a benchmark has a bug" to "the format cannot hold the
+  phenomenon," which is a much larger claim and squarely a representation-learning point
+  rather than a cheminformatics one. Arguing against: it makes the audit — which is the
+  part with hard numbers — supporting evidence rather than the result.
+- **Renumbering needed.** Sections after §14 shifted when fault 5 moved into Act IV. Left
+  as-is for now since we are still moving pieces; I will renumber once the running order
+  is settled.
