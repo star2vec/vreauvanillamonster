@@ -1543,6 +1543,8 @@
     ],
     "distance_matrix_identical": true,
     "distance_matrix_max_abs_difference": 0.0,
+    "naive_independent_embedding_max_abs_difference": 1.8371450096041229,
+    "naive_note": "Embedding the two enantiomers separately instead of reflecting one conformer gives this much disagreement, from torsional minima rather than from any failure of the theorem. Stated on the page so a reader reproducing it the naive way is not misled.",
     "heavy_atom_labels": [
       "C0",
       "C1",

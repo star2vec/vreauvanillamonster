@@ -178,10 +178,13 @@ in this literature: 98–100% R/S accuracy with an order-sensitive aggregator ve
 
 ### 8. Where the theorem stops
 The limit of our own argument, stated before anyone else states it. The theorem is exact for
-a *fixed* conformation. Two independently generated conformers of two enantiomers differ by
-over 1 Å in their distance matrices, because embedding lands in different torsional minima.
-So a 3D model *can* separate enantiomers in practice — by conformer artefact, not by seeing
-parity. That is learning noise.
+a *fixed* conformation. Two independently embedded enantiomers differ by **1.837 Å** in
+their distance matrices, because ETKDG and MMFF settle into different torsional minima at
+the flexible remote groups. So a 3D model *can* separate enantiomers in practice — by
+conformer artefact, not by seeing parity. That is learning noise.
+
+Our own number, asserted in `assets.py`. An agent had reported 1.11 Å; that did not
+reproduce. See `CLAIMS.md`.
 
 **[REC] Keep this.** Short, costs nothing, and signals we understand the argument rather
 than reciting it.

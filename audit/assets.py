@@ -37,6 +37,7 @@ FIGURES = OUT / "figures"
 # The lead exhibit, whose enantiomers drive the 3D widget. (5R) is the entry the
 # source described as spearmint; (5S) is the caraway one.
 CARVONE_R = "CC1=CC[C@H](CC1=O)C(=C)C"
+CARVONE_S = "CC1=CC[C@@H](CC1=O)C(=C)C"
 
 
 def slug(text):
@@ -259,6 +260,33 @@ def main():
     dm_heavy = dm_a[np.ix_(heavy, heavy)]
     print(f"  heavy-atom view for display: {dm_heavy.shape[0]}x{dm_heavy.shape[0]}")
 
+    # The counterexample the page needs in order not to mislead. Embedding the two
+    # enantiomers SEPARATELY gives distance matrices that differ substantially --
+    # not because the theorem fails, but because ETKDG and MMFF settle into
+    # different torsional minima at the flexible remote groups. A reader who tried
+    # to reproduce the widget the naive way would conclude we were wrong, so the
+    # page states this number and we measure it ourselves rather than cite it.
+    naive = []
+    for smi in (CARVONE_R, CARVONE_S):
+        m = Chem.AddHs(Chem.MolFromSmiles(smi))
+        ps = rdDistGeom.ETKDGv3()
+        ps.randomSeed = 0xF00D
+        rdDistGeom.EmbedMolecule(m, ps)
+        AllChem.MMFFOptimizeMolecule(m, maxIters=2000)
+        naive.append(m)
+    order_matches = ([a.GetSymbol() for a in naive[0].GetAtoms()]
+                     == [a.GetSymbol() for a in naive[1].GetAtoms()])
+    naive_delta = float(np.max(np.abs(
+        Chem.Get3DDistanceMatrix(naive[0], force=True)
+        - Chem.Get3DDistanceMatrix(naive[1], force=True))))
+    print(f"  independently embedded enantiomers, same seed, atom order "
+          f"{'matches' if order_matches else 'DIFFERS -- comparison invalid'}: "
+          f"max|dA - dB| = {naive_delta:.3f} A")
+    assert order_matches, "atom ordering diverged; the naive comparison is meaningless"
+    assert naive_delta > 0.5, (
+        "independent embedding was expected to differ substantially; if it no longer "
+        "does, the conformational-flexibility section needs rewriting")
+
     assets["mirror_pair"] = {
         "molecule": "carvone",
         "note": ("Built by embedding once and reflecting, so the two share atom "
@@ -268,6 +296,12 @@ def main():
         "molecules": pair,
         "distance_matrix_identical": delta == 0.0,
         "distance_matrix_max_abs_difference": delta,
+        "naive_independent_embedding_max_abs_difference": naive_delta,
+        "naive_note": ("Embedding the two enantiomers separately instead of reflecting "
+                       "one conformer gives this much disagreement, from torsional "
+                       "minima rather than from any failure of the theorem. Stated on "
+                       "the page so a reader reproducing it the naive way is not "
+                       "misled."),
         "heavy_atom_labels": [a.GetSymbol() + str(i)
                               for i, a in zip(heavy, [a.GetAtomWithIdx(h) for h in heavy])],
         "distance_matrix_heavy": [[round(float(x), 4) for x in row] for row in dm_heavy],
