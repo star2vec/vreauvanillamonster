@@ -1,0 +1,10 @@
+# Audit and asset generation. Pure Python, no GPU, no build step.
+# Works on Apple Silicon and Intel, Python 3.10+.
+rdkit>=2023.9
+pandas>=2.0
+numpy>=1.24
+
+# Experiment only (see experiment/README.md). Deliberately NOT DeepChem/DGL:
+# see the note in experiment/ on why OpenPOM's stack is not a dependency here.
+# torch>=2.1
+# scikit-learn>=1.3

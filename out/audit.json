@@ -1,0 +1,1068 @@
+{
+  "benchmark": {
+    "rows": 4983,
+    "columns": 140,
+    "smiles_column": "nonStereoSMILES",
+    "n_labels": 138,
+    "labels_are_binary": true,
+    "stereo_chars_in_whole_file": {
+      "@": 0,
+      "/": 0,
+      "\\": 0
+    },
+    "rows_labelled_odorless": 200
+  },
+  "vocabulary": {
+    "n_labels": 138,
+    "source": "hardcoded `required_desc` in goodcents_dataset_curation.ipynb cell 4, cited to Lee et al., A Principal Odor Map Unifies Diverse Tasks in Human Olfactory Perception (bioRxiv 2022.09.01.504602v4)",
+    "mint_merger_group": [
+      "cornmint",
+      "peppermint",
+      "mint",
+      "minty",
+      "spearmint"
+    ],
+    "descriptor_fate": {
+      "caraway": "deleted",
+      "spearmint": "merged into 'mint'",
+      "dill": "deleted",
+      "mentholic": "deleted",
+      "peppermint": "merged into 'mint'",
+      "minty": "merged into 'mint'",
+      "neroli": "deleted",
+      "anise": "deleted",
+      "licorice": "deleted",
+      "turpentine": "deleted",
+      "mint": "in vocabulary"
+    }
+  },
+  "string_hack": {
+    "molecules_compared": 7902,
+    "distinct_via_string_replace": 4983,
+    "distinct_via_rdkit": 4983,
+    "disagreements": 0,
+    "benchmark_rows_with_radicals": 6,
+    "radicals_are_preexisting_metal_complexes": true
+  },
+  "collapse": {
+    "source_molecules_stereo_aware": 5707,
+    "distinct_flattened_skeletons": 4983,
+    "benchmark_rows": 4983,
+    "reproduces_shipped_file_exactly": true,
+    "rows_that_are_fusions": 534,
+    "fusion_share_of_benchmark": 0.1072,
+    "stereoisomers_absorbed": 1258,
+    "fusions_with_conflicting_labels": 508,
+    "max_isomers_in_one_row": 8
+  },
+  "union_rule": {
+    "rows_checked": 4983,
+    "mismatches": 0,
+    "rule": "each row's label set is exactly the union of the curated labels of every source row sharing its flattened skeleton, with 'odorless' suppressed only where two or more source rows were collapsed (merge_datasets.ipynb cell 42)",
+    "note": "Menthyl lactate is the row that forced this precision: its single source record reads 'mint;cooling;odorless', and because nothing was merged into it the contradiction survives into the shipped benchmark."
+  },
+  "parity": {
+    "total_fusions": 534,
+    "fusions_containing_an_enantiomer_pair": 87,
+    "enantiomer_pairs_with_conflicting_labels": 74,
+    "fusions_diastereomer_or_EZ_only": 447,
+    "why_it_matters": "A 2D graph model receives an identical tensor for all 534 fusions. A distance-based 3D model is provably blind only to the enantiomer fusions -- diastereomers and E/Z isomers have different distance matrices and are separable. So the parity-specific claim rests on the enantiomer count, not the total.",
+    "enantiomer_conflict_skeletons": [
+      "C=C(C)C1CC=C(C)C(=O)C1",
+      "C=C(C)C1CC=C(C)CC1",
+      "C=C(C)C1CCC2(C)OC2C1",
+      "C=C(C)C1CCC2=CC(=O)CC(C)C2(C)C1",
+      "C=C1C2CCC(C2)C1(C)C",
+      "C=C1CCC2CC1C2(C)C",
+      "C=C1CCCC(C)(C)C1CCC(C)=O",
+      "C=CC(C)(O)CCC=C(C)C",
+      "C=CC(O)CCC",
+      "C=CC(O)CCCCC",
+      "C=CC(O)CCCCCC",
+      "C=CC(O)CCCCCCC",
+      "C=CC1(C)CCC(C(C)C=O)O1",
+      "C=CC1(C)CCC(O)C(C)(C)O1",
+      "CC(=O)CC(=O)OC1CC(C)CCC1C(C)C",
+      "CC(=O)CCC1C(C)=CCCC1(C)C",
+      "CC(=O)OC(C)c1ccccc1",
+      "CC(=O)OC1CC2CCC1(C)C2(C)C",
+      "CC(=O)OCCC(C)CCC=C(C)C",
+      "CC(C)=C1CCC(C)CC1=O",
+      "CC(C)=CCCC(C)(O)C1CC=C(C)CC1",
+      "CC(C)=CCCC(C)CC=O",
+      "CC(C)=CCCC(C)CCO",
+      "CC(C)C(C)CCC(C)(C)O",
+      "CC(C=O)Cc1ccc2c(c1)OCO2",
+      "CC(C=O)c1ccccc1",
+      "CC(CO)c1ccccc1",
+      "CC(O)c1ccccc1",
+      "CC1(C)C2CC=C(C=O)C1C2",
+      "CC1(C)C2CCC1(C)C(OC=O)C2",
+      "CC12CCC(C1)C(C)(C)C2=O",
+      "CC1=C(CCC(C)O)C(C)(C)CCC1",
+      "CC1=CC(=O)C(C(C)C)CC1",
+      "CC1=CC(=O)C2CC1C2(C)C",
+      "CC1=CCC(C(C)(C)O)CC1",
+      "CC1=CCC2CC1C2(C)C",
+      "CC1CCC(C(C)C)C(=O)C1",
+      "CC1CCCC2(C)CCCCC12O",
+      "CC1OCCCCCCCCCCCOC1=O",
+      "CC=CC(=O)C(C)CC",
+      "CCC(C)C(=O)O",
+      "CCC(C)C(=O)OC",
+      "CCC(C)C=O",
+      "CCC(C)CC=O",
+      "CCC(C)CCCO",
+      "CCC(C)CO",
+      "CCC(C)O",
+      "CCC1CC(C)(C)CCC1=O",
+      "CCC1CCC(=O)O1",
+      "CCCC(C)O",
+      "CCCC(CCO)SC",
+      "CCCC(S)CC=O",
+      "CCCC(S)CCO",
+      "CCCC1CCC(=O)O1",
+      "CCCC1CCOC(C)S1",
+      "CCCCC(C)CCC(=O)O",
+      "CCCCC(C)O",
+      "CCCCC(CC)C(=O)O",
+      "CCCCC(CC)CCC(=O)O",
+      "CCCCC1CCC(=O)O1",
+      "CCCCC1OC(=O)CC1C",
+      "CCCCCC(C)CCC(=O)O",
+      "CCCCCC(C)O",
+      "CCCCCC1CCC(=O)O1",
+      "CCCCCC1CCCC(=O)O1",
+      "CCCCCCC(C)O",
+      "CCCCCCC1CCC(=O)O1",
+      "CCCCCCC1CCCC(=O)O1",
+      "CCCCCCCC1CCC(=O)O1",
+      "CCCCCCCC1CCCC(=O)O1",
+      "CCCCCCCCC1CCC(=O)O1",
+      "CCOC(=O)C(C)CC",
+      "COC1=C(C)OC(C)C1=O",
+      "Cc1coc2c1CCC(C)C2"
+    ]
+  },
+  "contrast": {
+    "fusions_scored": 534,
+    "with_a_fully_disjoint_isomer_pair": 66,
+    "with_worst_pair_overlap_under_a_third": 329
+  },
+  "odorless_erasure": {
+    "rule": "merge_datasets.ipynb cell 42 drops 'odorless' from a fused group unless every fused isomer was odorless",
+    "n_groups": 7,
+    "skeletons": [
+      "CCC(C)CC=O",
+      "NC(CCC(=O)O)C(=O)O",
+      "NC(CS)C(=O)O",
+      "O=C(O)C=CC(=O)O",
+      "O=C1OC(C(O)CO)C(O)=C1O",
+      "OC1COC(O)C(O)C1O",
+      "OCC(O)C(O)C(O)C(O)CO"
+    ]
+  },
+  "exhibits": [
+    {
+      "title": "Carvone -- the lead",
+      "skeleton": "C=C(C)C1CC=C(C)C(=O)C1",
+      "confidence": "high",
+      "note": "(5R) is the spearmint-described entry, (5S) the caraway one, per the dataset's own IUPAC names. Upstream, 'spearmint' was merged into 'mint' and 'caraway' was deleted -- yet the two enantiomers still carried different labels after curation. The merge destroyed that surviving difference. This is the ONLY exhibit in the benchmark whose perceptual difference meets the purity-controlled standard, on three independent lines.",
+      "evidence_tier": "established",
+      "evidence_meaning": "perceptual difference independently established under purity control",
+      "citation": "Three independent 1971 papers: Russell & Hills, Science 172:1043; Friedman & Miller, Science 172:1044; Leitereg et al., Nature 230:455 (plus thresholds in J. Agric. Food Chem. 1971, 19, 785). Forced-choice discrimination confirmed by Laska & Teubner, Chem. Senses 1999, 24, 161. Independent modern line: Sato et al., Sci. Rep. 2015, 5, 14073 (open access, PMC4566093), which covers carvone enantiomers alongside wine lactone.",
+      "parity_class": "enantiomer pair with conflicting labels -- blind to distance-based 3D models, theorem applies",
+      "enantiomer_pairs": [
+        {
+          "a": "C=C(C)[C@H]1CC=C(C)C(=O)C1",
+          "a_name": "d-carvone",
+          "a_labels": [
+            "mint",
+            "spicy"
+          ],
+          "b": "C=C(C)[C@@H]1CC=C(C)C(=O)C1",
+          "b_name": "(-)-carvone",
+          "b_labels": [
+            "herbal",
+            "mint",
+            "sweet"
+          ]
+        }
+      ],
+      "isomers": [
+        {
+          "smiles": "C=C(C)C1CC=C(C)C(=O)C1",
+          "name": "carvone",
+          "iupac": "2-methyl-5-prop-1-en-2-ylcyclohex-2-en-1-one",
+          "labels": [
+            "mint"
+          ]
+        },
+        {
+          "smiles": "C=C(C)[C@@H]1CC=C(C)C(=O)C1",
+          "name": "(-)-carvone",
+          "iupac": "(5R)-2-methyl-5-prop-1-en-2-ylcyclohex-2-en-1-one",
+          "labels": [
+            "herbal",
+            "mint",
+            "sweet"
+          ]
+        },
+        {
+          "smiles": "C=C(C)[C@H]1CC=C(C)C(=O)C1",
+          "name": "d-carvone",
+          "iupac": "(5S)-2-methyl-5-prop-1-en-2-ylcyclohex-2-en-1-one",
+          "labels": [
+            "mint",
+            "spicy"
+          ]
+        }
+      ],
+      "benchmark_row": {
+        "nonStereoSMILES": "C=C(C)C1CC=C(C)C(=O)C1",
+        "labels": [
+          "herbal",
+          "mint",
+          "spicy",
+          "sweet"
+        ]
+      }
+    },
+    {
+      "title": "Nootkatone -- DEMOTED to a citation-drift case study",
+      "skeleton": "C=C(C)C1CCC2=CC(=O)CC(C)C2(C)C1",
+      "confidence": "low",
+      "note": "Was the number-two exhibit; it does not survive. The source records do disagree -- grapefruit/orange/citrus/woody against the single word 'terpenic' -- and that fusion is real. But the primary literature for the perceptual claim (Haring et al., J. Agric. Food Chem. 1972) compared a (-)-sample made by total synthesis from (+)-sabinene with NO quantified enantiomeric excess against a (+)-sample that was a natural isolate. Different provenance means different impurity profiles: this is the identical confound that killed the limonene claim, and it has never been replicated in 54 years. The circulating thresholds are also unit-corrupted -- taste-in-water figures relabelled as odour-in-air, 'ppm of saturated vapour' misread as 'ppm in air', and Molecules 2022, 27, 3827 states the comparison inverted and off by 1000x. Use it to teach citation drift, not chirality.",
+      "evidence_tier": "confounded",
+      "evidence_meaning": "source records disagree, but the primary literature for the perceptual claim carries a known impurity confound",
+      "citation": "Haring et al., J. Agric. Food Chem. 1972; upstream threshold source is Boelens, Boelens & van Gemert, Perfum. Flavor. 1993, 18(6), 1-15 (unread, Cloudflare)",
+      "parity_class": "enantiomer pair with conflicting labels -- blind to distance-based 3D models, theorem applies",
+      "enantiomer_pairs": [
+        {
+          "a": "C=C(C)[C@@H]1CCC2=CC(=O)C[C@@H](C)[C@]2(C)C1",
+          "a_name": "nootkatone",
+          "a_labels": [
+            "citrus",
+            "fruit skin",
+            "grapefruit",
+            "orange",
+            "sweet",
+            "woody"
+          ],
+          "b": "C=C(C)[C@H]1CCC2=CC(=O)C[C@H](C)[C@@]2(C)C1",
+          "b_name": "(-)-nootkatone",
+          "b_labels": [
+            "terpenic"
+          ]
+        }
+      ],
+      "isomers": [
+        {
+          "smiles": "C=C(C)C1CCC2=CC(=O)CC(C)C2(C)C1",
+          "name": null,
+          "iupac": null,
+          "labels": [
+            "citrus",
+            "grapefruit"
+          ]
+        },
+        {
+          "smiles": "C=C(C)[C@@H]1CCC2=CC(=O)C[C@@H](C)[C@]2(C)C1",
+          "name": "nootkatone",
+          "iupac": "(4R,4aS,6R)-4,4a-dimethyl-6-prop-1-en-2-yl-3,4,5,6,7,8-hexahydronaphthalen-2-one",
+          "labels": [
+            "citrus",
+            "fruit skin",
+            "grapefruit",
+            "orange",
+            "sweet",
+            "woody"
+          ]
+        },
+        {
+          "smiles": "C=C(C)[C@H]1CCC2=CC(=O)C[C@H](C)[C@@]2(C)C1",
+          "name": "(-)-nootkatone",
+          "iupac": "(4S,4aR,6S)-4,4a-dimethyl-6-prop-1-en-2-yl-3,4,5,6,7,8-hexahydronaphthalen-2-one",
+          "labels": [
+            "terpenic"
+          ]
+        }
+      ],
+      "benchmark_row": {
+        "nonStereoSMILES": "C=C(C)C1CCC2=CC(=O)CC(C)C2(C)C1",
+        "labels": [
+          "citrus",
+          "fruit skin",
+          "grapefruit",
+          "orange",
+          "sweet",
+          "terpenic",
+          "woody"
+        ]
+      }
+    },
+    {
+      "title": "alpha-Pinene -- the human-validated pair",
+      "skeleton": "CC1=CCC2CC1C2(C)C",
+      "confidence": "high",
+      "note": "The strongest evidence base of any exhibit. Laska & Teubner 1999 (Chem. Senses 24:161) tested ten enantiomer pairs by forced-choice triangular test; alpha-pinene, carvone and limonene were the three humans could reliably discriminate. The benchmark labels differ sharply -- four labels against eight -- and the merge unions them. Held one tier below carvone because Laska's purity control could not be read (OUP full text inaccessible), so discrimination is panel-verified but ee is not.",
+      "evidence_tier": "records_disagree",
+      "evidence_meaning": "the benchmark fuses an enantiomer pair whose source records disagree; whether the percepts differ is UNVERIFIED -- do not assert it",
+      "citation": "Laska & Teubner, Chem. Senses 1999, 24, 161 (abstract-level)",
+      "parity_class": "enantiomer pair with conflicting labels -- blind to distance-based 3D models, theorem applies",
+      "enantiomer_pairs": [
+        {
+          "a": "CC1=CC[C@@H]2C[C@H]1C2(C)C",
+          "a_name": "(+)-alpha-pinene",
+          "a_labels": [
+            "aromatic",
+            "herbal",
+            "mint",
+            "terpenic"
+          ],
+          "b": "CC1=CC[C@H]2C[C@@H]1C2(C)C",
+          "b_name": "(-)-alpha-pinene",
+          "b_labels": [
+            "earthy",
+            "fresh",
+            "herbal",
+            "pine",
+            "sharp",
+            "terpenic",
+            "warm",
+            "woody"
+          ]
+        }
+      ],
+      "isomers": [
+        {
+          "smiles": "CC1=CCC2CC1C2(C)C",
+          "name": "alpha-pinene",
+          "iupac": "2,6,6-trimethylbicyclo[3.1.1]hept-2-ene",
+          "labels": [
+            "camphoreous",
+            "cooling",
+            "earthy",
+            "fresh",
+            "herbal",
+            "pine",
+            "sweet",
+            "terpenic",
+            "woody"
+          ]
+        },
+        {
+          "smiles": "CC1=CC[C@@H]2C[C@H]1C2(C)C",
+          "name": "(+)-alpha-pinene",
+          "iupac": "(1R,5R)-2,6,6-trimethylbicyclo[3.1.1]hept-2-ene",
+          "labels": [
+            "aromatic",
+            "herbal",
+            "mint",
+            "terpenic"
+          ]
+        },
+        {
+          "smiles": "CC1=CC[C@H]2C[C@@H]1C2(C)C",
+          "name": "(-)-alpha-pinene",
+          "iupac": "(1S,5S)-2,6,6-trimethylbicyclo[3.1.1]hept-2-ene",
+          "labels": [
+            "earthy",
+            "fresh",
+            "herbal",
+            "pine",
+            "sharp",
+            "terpenic",
+            "warm",
+            "woody"
+          ]
+        }
+      ],
+      "benchmark_row": {
+        "nonStereoSMILES": "CC1=CCC2CC1C2(C)C",
+        "labels": [
+          "aromatic",
+          "camphoreous",
+          "cooling",
+          "earthy",
+          "fresh",
+          "herbal",
+          "mint",
+          "pine",
+          "sharp",
+          "sweet",
+          "terpenic",
+          "warm",
+          "woody"
+        ]
+      }
+    },
+    {
+      "title": "Geosmin -- petrichor, five labels against one",
+      "skeleton": "CC1CCCC2(C)CCCCC12O",
+      "confidence": "high",
+      "note": "Geosmin is the smell of rain on dry earth, and humans detect it at parts per trillion. The unspecified entry carries earthy/fresh/green/herbal/musty; (+)-geosmin carries the single word 'earthy'. No purity-controlled enantiomer comparison located -- present as a database disagreement, not as an established perceptual difference.",
+      "evidence_tier": "records_disagree",
+      "evidence_meaning": "the benchmark fuses an enantiomer pair whose source records disagree; whether the percepts differ is UNVERIFIED -- do not assert it",
+      "citation": null,
+      "parity_class": "enantiomer pair with conflicting labels -- blind to distance-based 3D models, theorem applies",
+      "enantiomer_pairs": [
+        {
+          "a": "C[C@H]1CCC[C@@]2(C)CCCC[C@]12O",
+          "a_name": "geosmin",
+          "a_labels": [
+            "earthy",
+            "fresh",
+            "green",
+            "herbal",
+            "musty"
+          ],
+          "b": "C[C@@H]1CCC[C@]2(C)CCCC[C@@]12O",
+          "b_name": "(+)-geosmin",
+          "b_labels": [
+            "earthy"
+          ]
+        }
+      ],
+      "isomers": [
+        {
+          "smiles": "CC1CCCC2(C)CCCCC12O",
+          "name": "octahydro-4,8a-dimethyl-4a(2h)-naphthol",
+          "iupac": "4,8a-dimethyl-1,2,3,4,5,6,7,8-octahydronaphthalen-4a-ol",
+          "labels": [
+            "earthy",
+            "fresh"
+          ]
+        },
+        {
+          "smiles": "C[C@@H]1CCC[C@]2(C)CCCC[C@@]12O",
+          "name": "(+)-geosmin",
+          "iupac": "(4R,4aR,8aS)-4,8a-dimethyl-1,2,3,4,5,6,7,8-octahydronaphthalen-4a-ol",
+          "labels": [
+            "earthy"
+          ]
+        },
+        {
+          "smiles": "C[C@H]1CCC[C@@]2(C)CCCC[C@@]12O",
+          "name": "5173-70-6",
+          "iupac": "(4S,4aR,8aR)-4,8a-dimethyl-1,2,3,4,5,6,7,8-octahydronaphthalen-4a-ol",
+          "labels": [
+            "earthy",
+            "musty"
+          ]
+        },
+        {
+          "smiles": "C[C@H]1CCC[C@@]2(C)CCCC[C@]12O",
+          "name": "geosmin",
+          "iupac": "(4S,4aS,8aR)-4,8a-dimethyl-1,2,3,4,5,6,7,8-octahydronaphthalen-4a-ol",
+          "labels": [
+            "earthy",
+            "fresh",
+            "green",
+            "herbal",
+            "musty"
+          ]
+        }
+      ],
+      "benchmark_row": {
+        "nonStereoSMILES": "CC1CCCC2(C)CCCCC12O",
+        "labels": [
+          "earthy",
+          "fresh",
+          "green",
+          "herbal",
+          "musty"
+        ]
+      }
+    },
+    {
+      "title": "Pulegone -- seven labels against one",
+      "skeleton": "CC(C)=C1CCC(C)CC1=O",
+      "confidence": "high",
+      "note": "(+)-pulegone: camphoreous, fresh, herbal, metallic, mint, sulfurous, sweet. (-)-pulegone: mint. One row asserts all eight. No purity-controlled comparison located.",
+      "evidence_tier": "records_disagree",
+      "evidence_meaning": "the benchmark fuses an enantiomer pair whose source records disagree; whether the percepts differ is UNVERIFIED -- do not assert it",
+      "citation": null,
+      "parity_class": "enantiomer pair with conflicting labels -- blind to distance-based 3D models, theorem applies",
+      "enantiomer_pairs": [
+        {
+          "a": "CC(C)=C1CC[C@@H](C)CC1=O",
+          "a_name": "(+)-pulegone",
+          "a_labels": [
+            "camphoreous",
+            "fresh",
+            "herbal",
+            "metallic",
+            "mint",
+            "sulfurous",
+            "sweet"
+          ],
+          "b": "CC(C)=C1CC[C@H](C)CC1=O",
+          "b_name": "(-)-pulegone",
+          "b_labels": [
+            "mint"
+          ]
+        }
+      ],
+      "isomers": [
+        {
+          "smiles": "CC(C)=C1CCC(C)CC1=O",
+          "name": "pulegone",
+          "iupac": "5-methyl-2-propan-2-ylidenecyclohexan-1-one",
+          "labels": [
+            "mint"
+          ]
+        },
+        {
+          "smiles": "CC(C)=C1CC[C@@H](C)CC1=O",
+          "name": "(+)-pulegone",
+          "iupac": "(5R)-5-methyl-2-propan-2-ylidenecyclohexan-1-one",
+          "labels": [
+            "camphoreous",
+            "fresh",
+            "herbal",
+            "metallic",
+            "mint",
+            "sulfurous",
+            "sweet"
+          ]
+        },
+        {
+          "smiles": "CC(C)=C1CC[C@H](C)CC1=O",
+          "name": "(-)-pulegone",
+          "iupac": "(5S)-5-methyl-2-propan-2-ylidenecyclohexan-1-one",
+          "labels": [
+            "mint"
+          ]
+        }
+      ],
+      "benchmark_row": {
+        "nonStereoSMILES": "CC(C)=C1CCC(C)CC1=O",
+        "labels": [
+          "camphoreous",
+          "fresh",
+          "herbal",
+          "metallic",
+          "mint",
+          "sulfurous",
+          "sweet"
+        ]
+      }
+    },
+    {
+      "title": "Menthone -- the menthol exhibit that actually works",
+      "skeleton": "CC1CCC(C(C)C)C(=O)C1",
+      "confidence": "high",
+      "note": "Replaces the menthol exhibit on the parity axis: (-)-menthone carries eight labels, (+)-menthone two, and they are a true enantiomer pair. No purity-controlled odour comparison located for the menthone enantiomers either, so this is a database disagreement too.",
+      "evidence_tier": "records_disagree",
+      "evidence_meaning": "the benchmark fuses an enantiomer pair whose source records disagree; whether the percepts differ is UNVERIFIED -- do not assert it",
+      "citation": null,
+      "parity_class": "enantiomer pair with conflicting labels -- blind to distance-based 3D models, theorem applies",
+      "enantiomer_pairs": [
+        {
+          "a": "CC(C)[C@@H]1CC[C@@H](C)CC1=O",
+          "a_name": "(-)-menthone",
+          "a_labels": [
+            "anisic",
+            "camphoreous",
+            "cooling",
+            "fresh",
+            "green",
+            "herbal",
+            "mint",
+            "sweet"
+          ],
+          "b": "CC(C)[C@H]1CC[C@H](C)CC1=O",
+          "b_name": "(+)-menthone",
+          "b_labels": [
+            "cooling",
+            "mint"
+          ]
+        }
+      ],
+      "isomers": [
+        {
+          "smiles": "CC(C)[C@@H]1CC[C@@H](C)CC1=O",
+          "name": "(-)-menthone",
+          "iupac": "(2S,5R)-5-methyl-2-propan-2-ylcyclohexan-1-one",
+          "labels": [
+            "anisic",
+            "camphoreous",
+            "cooling",
+            "fresh",
+            "green",
+            "herbal",
+            "mint",
+            "sweet"
+          ]
+        },
+        {
+          "smiles": "CC(C)[C@@H]1CC[C@H](C)CC1=O",
+          "name": "isomenthone",
+          "iupac": "(2S,5S)-5-methyl-2-propan-2-ylcyclohexan-1-one",
+          "labels": [
+            "mint"
+          ]
+        },
+        {
+          "smiles": "CC(C)[C@H]1CC[C@@H](C)CC1=O",
+          "name": "(+)-isomenthone",
+          "iupac": "(2R,5R)-5-methyl-2-propan-2-ylcyclohexan-1-one",
+          "labels": [
+            "mint"
+          ]
+        },
+        {
+          "smiles": "CC(C)[C@H]1CC[C@H](C)CC1=O",
+          "name": "(+)-menthone",
+          "iupac": "(2R,5S)-5-methyl-2-propan-2-ylcyclohexan-1-one",
+          "labels": [
+            "cooling",
+            "mint"
+          ]
+        },
+        {
+          "smiles": "CC1CCC(C(C)C)C(=O)C1",
+          "name": "10458-14-7",
+          "iupac": "5-methyl-2-propan-2-ylcyclohexan-1-one",
+          "labels": [
+            "camphoreous",
+            "cooling",
+            "ethereal",
+            "mint",
+            "sweet"
+          ]
+        }
+      ],
+      "benchmark_row": {
+        "nonStereoSMILES": "CC1CCC(C(C)C)C(=O)C1",
+        "labels": [
+          "anisic",
+          "camphoreous",
+          "cooling",
+          "ethereal",
+          "fresh",
+          "green",
+          "herbal",
+          "mint",
+          "sweet"
+        ]
+      }
+    },
+    {
+      "title": "(R)- vs (S)-2-butanol -- the honest counter-exhibit",
+      "skeleton": "CCC(C)O",
+      "confidence": "high",
+      "note": "Include this one deliberately, against our own interest. The benchmark records different labels for the two enantiomers (fruity/oily/winey vs oily/winey), but Laska & Teubner 1999 found humans CANNOT discriminate 2-butanol enantiomers by smell. So some of the 74 conflicts are noise in the source descriptions, not destroyed perceptual signal. Saying this out loud is what makes the rest of the argument credible -- and it bounds what the phase-3 experiment can claim.",
+      "evidence_tier": "refuted",
+      "evidence_meaning": "source records disagree and humans provably CANNOT discriminate the pair",
+      "citation": "Laska & Teubner, Chem. Senses 1999, 24, 161",
+      "parity_class": "enantiomer pair with conflicting labels -- blind to distance-based 3D models, theorem applies",
+      "enantiomer_pairs": [
+        {
+          "a": "CC[C@@H](C)O",
+          "a_name": "(r)-(-)-2-butanol",
+          "a_labels": [
+            "fruity",
+            "oily",
+            "winey"
+          ],
+          "b": "CC[C@H](C)O",
+          "b_name": "(s)-(+)-2-butanol",
+          "b_labels": [
+            "oily",
+            "winey"
+          ]
+        }
+      ],
+      "isomers": [
+        {
+          "smiles": "CCC(C)O",
+          "name": "2-butanol",
+          "iupac": "butan-2-ol",
+          "labels": [
+            "alcoholic",
+            "apricot",
+            "fermented",
+            "fruity",
+            "oily",
+            "solvent",
+            "sweet",
+            "winey"
+          ]
+        },
+        {
+          "smiles": "CC[C@@H](C)O",
+          "name": "(r)-(-)-2-butanol",
+          "iupac": "(2R)-butan-2-ol",
+          "labels": [
+            "fruity",
+            "oily",
+            "winey"
+          ]
+        },
+        {
+          "smiles": "CC[C@H](C)O",
+          "name": "(s)-(+)-2-butanol",
+          "iupac": "(2S)-butan-2-ol",
+          "labels": [
+            "oily",
+            "winey"
+          ]
+        }
+      ],
+      "benchmark_row": {
+        "nonStereoSMILES": "CCC(C)O",
+        "labels": [
+          "alcoholic",
+          "apricot",
+          "fermented",
+          "fruity",
+          "oily",
+          "solvent",
+          "sweet",
+          "winey"
+        ]
+      }
+    },
+    {
+      "title": "3-methylpentanal -- one enantiomer recorded odorless",
+      "skeleton": "CCC(C)CC=O",
+      "confidence": "medium",
+      "note": "'odorless' IS in the 138-label vocabulary, so this exhibit survives both vocabulary faults intact and dies only at the flatten. Caveat: the (3R) entry resolves to a thin database record (schembl9421367), so 'odorless' may mean 'undescribed' rather than 'tested and found odorless'.",
+      "evidence_tier": "records_disagree",
+      "evidence_meaning": "the benchmark fuses an enantiomer pair whose source records disagree; whether the percepts differ is UNVERIFIED -- do not assert it",
+      "citation": null,
+      "parity_class": "enantiomer pair with conflicting labels -- blind to distance-based 3D models, theorem applies",
+      "enantiomer_pairs": [
+        {
+          "a": "CC[C@H](C)CC=O",
+          "a_name": "(3s)-3-methylpentanal",
+          "a_labels": [
+            "fresh",
+            "fruity",
+            "green",
+            "pungent"
+          ],
+          "b": "CC[C@@H](C)CC=O",
+          "b_name": "schembl9421367",
+          "b_labels": [
+            "odorless"
+          ]
+        }
+      ],
+      "isomers": [
+        {
+          "smiles": "CC[C@@H](C)CC=O",
+          "name": "schembl9421367",
+          "iupac": "(3R)-3-methylpentanal",
+          "labels": [
+            "odorless"
+          ]
+        },
+        {
+          "smiles": "CC[C@H](C)CC=O",
+          "name": "(3s)-3-methylpentanal",
+          "iupac": "(3S)-3-methylpentanal",
+          "labels": [
+            "fresh",
+            "fruity",
+            "green",
+            "pungent"
+          ]
+        }
+      ],
+      "benchmark_row": {
+        "nonStereoSMILES": "CCC(C)CC=O",
+        "labels": [
+          "fresh",
+          "fruity",
+          "green",
+          "pungent"
+        ]
+      }
+    },
+    {
+      "title": "Menthol skeleton -- 2D-blindness only, NOT a parity exhibit",
+      "skeleton": "CC1CCC(C(C)C)C(O)C1",
+      "confidence": "medium",
+      "note": "Six isomers fuse to a row asserting eleven labels; no single isomer carries more than six, and the row is exactly the union. ('bitter' comes from (+)-neomenthol and 'pine' from neomenthol -- both genuinely in the curated sources, not imported from Leffingwell.) But these are DIASTEREOMERS: menthol, neomenthol, isomenthol and neoisomenthol have different distance geometries, so a 3D model can separate them and the reflection theorem does not apply. Worse for a parity framing, Laska & Teubner 1999 found humans cannot discriminate the menthol ENANTIOMERS at all. Use this to illustrate 2D-graph blindness and nothing more.",
+      "evidence_tier": "records_disagree",
+      "evidence_meaning": "the benchmark fuses an enantiomer pair whose source records disagree; whether the percepts differ is UNVERIFIED -- do not assert it",
+      "citation": null,
+      "parity_class": "diastereomer / E-Z only -- a 3D model CAN see this; proves 2D-graph blindness, not parity blindness",
+      "enantiomer_pairs": [],
+      "isomers": [
+        {
+          "smiles": "CC(C)[C@@H]1CC[C@@H](C)C[C@@H]1O",
+          "name": "(+)-neomenthol",
+          "iupac": "(1S,2S,5R)-5-methyl-2-propan-2-ylcyclohexan-1-ol",
+          "labels": [
+            "bitter",
+            "cooling",
+            "mint",
+            "musty",
+            "sweet"
+          ]
+        },
+        {
+          "smiles": "CC(C)[C@@H]1CC[C@@H](C)C[C@H]1O",
+          "name": "l-menthol",
+          "iupac": "(1R,2S,5R)-5-methyl-2-propan-2-ylcyclohexan-1-ol",
+          "labels": [
+            "cooling",
+            "mint"
+          ]
+        },
+        {
+          "smiles": "CC(C)[C@H]1CC[C@@H](C)CC1O",
+          "name": "neomenthol",
+          "iupac": "(2R,5R)-5-methyl-2-propan-2-ylcyclohexan-1-ol",
+          "labels": [
+            "camphoreous",
+            "cooling",
+            "mint",
+            "musty",
+            "pine"
+          ]
+        },
+        {
+          "smiles": "CC(C)[C@H]1CC[C@@H](C)C[C@@H]1O",
+          "name": "(+)-isomenthol",
+          "iupac": "(1S,2R,5R)-5-methyl-2-propan-2-ylcyclohexan-1-ol",
+          "labels": [
+            "camphoreous",
+            "earthy",
+            "hay",
+            "herbal",
+            "musty",
+            "sweet"
+          ]
+        },
+        {
+          "smiles": "CC(C)[C@H]1CC[C@@H](C)C[C@H]1O",
+          "name": "neoisomenthol",
+          "iupac": "(1R,2R,5R)-5-methyl-2-propan-2-ylcyclohexan-1-ol",
+          "labels": [
+            "camphoreous",
+            "musty",
+            "woody"
+          ]
+        },
+        {
+          "smiles": "CC1CCC(C(C)C)C(O)C1",
+          "name": "menthol",
+          "iupac": "5-methyl-2-propan-2-ylcyclohexan-1-ol",
+          "labels": [
+            "cooling",
+            "mint",
+            "musty",
+            "woody"
+          ]
+        }
+      ],
+      "benchmark_row": {
+        "nonStereoSMILES": "CC1CCC(C(C)C)C(O)C1",
+        "labels": [
+          "bitter",
+          "camphoreous",
+          "cooling",
+          "earthy",
+          "hay",
+          "herbal",
+          "mint",
+          "musty",
+          "pine",
+          "sweet",
+          "woody"
+        ]
+      }
+    },
+    {
+      "title": "Lily aldehyde -- the widest fusion",
+      "skeleton": "C=CC1(C)CCC(C(C)C=O)O1",
+      "confidence": "high",
+      "note": "Eight isomers into one row, the largest fusion in the benchmark. Note the contrast is low -- nearly all are floral -- so this exhibit sells scale, not disagreement.",
+      "evidence_tier": "records_disagree",
+      "evidence_meaning": "the benchmark fuses an enantiomer pair whose source records disagree; whether the percepts differ is UNVERIFIED -- do not assert it",
+      "citation": null,
+      "parity_class": "enantiomer pair with conflicting labels -- blind to distance-based 3D models, theorem applies",
+      "enantiomer_pairs": [
+        {
+          "a": "C=C[C@]1(C)CC[C@@H]([C@H](C)C=O)O1",
+          "a_name": "unii-pg9rxh5sua",
+          "a_labels": [
+            "floral",
+            "fresh"
+          ],
+          "b": "C=C[C@@]1(C)CC[C@H]([C@@H](C)C=O)O1",
+          "b_name": "unii-2j26s5u6si",
+          "b_labels": [
+            "floral"
+          ]
+        },
+        {
+          "a": "C=C[C@]1(C)CC[C@@H]([C@@H](C)C=O)O1",
+          "a_name": "unii-m4f9n3m370",
+          "a_labels": [
+            "floral",
+            "fresh"
+          ],
+          "b": "C=C[C@@]1(C)CC[C@H]([C@H](C)C=O)O1",
+          "b_name": "unii-m0kl78494n",
+          "b_labels": [
+            "floral"
+          ]
+        },
+        {
+          "a": "C=C[C@]1(C)CC[C@H]([C@H](C)C=O)O1",
+          "a_name": "unii-4tb943ojyt",
+          "a_labels": [
+            "floral",
+            "sweet"
+          ],
+          "b": "C=C[C@@]1(C)CC[C@@H]([C@@H](C)C=O)O1",
+          "b_name": "unii-a1nfm3874l",
+          "b_labels": [
+            "floral",
+            "fresh"
+          ]
+        }
+      ],
+      "isomers": [
+        {
+          "smiles": "C=CC1(C)CCC(C(C)C=O)O1",
+          "name": null,
+          "iupac": null,
+          "labels": [
+            "floral",
+            "fresh",
+            "lily",
+            "sweet"
+          ]
+        },
+        {
+          "smiles": "C=C[C@@]1(C)CC[C@@H]([C@@H](C)C=O)O1",
+          "name": "unii-a1nfm3874l",
+          "iupac": "(2R)-2-[(2S,5R)-5-ethenyl-5-methyloxolan-2-yl]propanal",
+          "labels": [
+            "floral",
+            "fresh"
+          ]
+        },
+        {
+          "smiles": "C=C[C@@]1(C)CC[C@H]([C@@H](C)C=O)O1",
+          "name": "unii-2j26s5u6si",
+          "iupac": "(2R)-2-[(2R,5R)-5-ethenyl-5-methyloxolan-2-yl]propanal",
+          "labels": [
+            "floral"
+          ]
+        },
+        {
+          "smiles": "C=C[C@@]1(C)CC[C@H]([C@H](C)C=O)O1",
+          "name": "unii-m0kl78494n",
+          "iupac": "(2S)-2-[(2R,5R)-5-ethenyl-5-methyloxolan-2-yl]propanal",
+          "labels": [
+            "floral"
+          ]
+        },
+        {
+          "smiles": "C=C[C@]1(C)CC[C@@H]([C@@H](C)C=O)O1",
+          "name": "unii-m4f9n3m370",
+          "iupac": "(2R)-2-[(2S,5S)-5-ethenyl-5-methyloxolan-2-yl]propanal",
+          "labels": [
+            "floral",
+            "fresh"
+          ]
+        },
+        {
+          "smiles": "C=C[C@]1(C)CC[C@@H]([C@H](C)C=O)O1",
+          "name": "unii-pg9rxh5sua",
+          "iupac": "(2S)-2-[(2S,5S)-5-ethenyl-5-methyloxolan-2-yl]propanal",
+          "labels": [
+            "floral",
+            "fresh"
+          ]
+        },
+        {
+          "smiles": "C=C[C@]1(C)CC[C@H]([C@@H](C)C=O)O1",
+          "name": "(2r,2'r,5's)-lilac aldehyde",
+          "iupac": "(2R)-2-[(2R,5S)-5-ethenyl-5-methyloxolan-2-yl]propanal",
+          "labels": [
+            "floral",
+            "sweet"
+          ]
+        },
+        {
+          "smiles": "C=C[C@]1(C)CC[C@H]([C@H](C)C=O)O1",
+          "name": "unii-4tb943ojyt",
+          "iupac": "(2S)-2-[(2R,5S)-5-ethenyl-5-methyloxolan-2-yl]propanal",
+          "labels": [
+            "floral",
+            "sweet"
+          ]
+        }
+      ],
+      "benchmark_row": {
+        "nonStereoSMILES": "C=CC1(C)CCC(C(C)C=O)O1",
+        "labels": [
+          "floral",
+          "fresh",
+          "lily",
+          "sweet"
+        ]
+      }
+    },
+    {
+      "title": "Geraniol / nerol -- demoted to a footnote",
+      "skeleton": "CC(C)=CCCC(C)=CCO",
+      "confidence": "low",
+      "note": "Originally intended as a headline exhibit, and it does not hold up. Goodscents calls nerol citrus/sweet/natural; Leffingwell independently calls it sweet/fresh/rose. So both isomers carry 'rose' after curation and the clean 'rose versus neroli' story is wrong. What it does show is a different fault: the two source authorities disagree with each other, and the merge unions rather than adjudicates.",
+      "evidence_tier": "records_disagree",
+      "evidence_meaning": "the benchmark fuses an enantiomer pair whose source records disagree; whether the percepts differ is UNVERIFIED -- do not assert it",
+      "citation": null,
+      "parity_class": "diastereomer / E-Z only -- a 3D model CAN see this; proves 2D-graph blindness, not parity blindness",
+      "enantiomer_pairs": [],
+      "isomers": [
+        {
+          "smiles": "CC(C)=CCC/C(C)=C/CO",
+          "name": "geraniol",
+          "iupac": "(2E)-3,7-dimethylocta-2,6-dien-1-ol",
+          "labels": [
+            "citrus",
+            "floral",
+            "fruity",
+            "rose",
+            "sweet",
+            "waxy"
+          ]
+        },
+        {
+          "smiles": "CC(C)=CCC/C(C)=C\\CO",
+          "name": "nerol",
+          "iupac": "(2Z)-3,7-dimethylocta-2,6-dien-1-ol",
+          "labels": [
+            "citrus",
+            "fresh",
+            "natural",
+            "rose",
+            "sweet"
+          ]
+        }
+      ],
+      "benchmark_row": {
+        "nonStereoSMILES": "CC(C)=CCCC(C)=CCO",
+        "labels": [
+          "citrus",
+          "floral",
+          "fresh",
+          "fruity",
+          "natural",
+          "rose",
+          "sweet",
+          "waxy"
+        ]
+      }
+    }
+  ]
+}
