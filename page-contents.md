@@ -161,9 +161,28 @@ appearing on something the reader already understands.
 | distance-based / E(3)-invariant | the 87 enantiomer fusions |
 | parity-aware | none |
 
-**[REC] Do not label rung 3 "SE(3)."** SE(3)-invariance is necessary but not sufficient:
-SphereNet is SE(3)-invariant and still failed Adams et al.'s stereoisomer separation test. A
-GDL reader will check this.
+**[CORRECTED] My earlier rationale for this was wrong, and the ladder is really four rungs.**
+I had written that SphereNet is SE(3)-invariant and "still failed" stereoisomer separation.
+Reading Adams et al.'s full text, Figure 3's caption actually says SphereNet's *"separation
+… persists through reflection, but the clusters overlap upon rotation of internal bonds."*
+Separation **does** persist through reflection — so SE(3)-invariance genuinely buys
+reflection sensitivity, and its failure there is conformational, not parity.
+
+The defensible version, quotable verbatim: torsion angles *"provide access to the full
+geometric information present in the conformer but do not guarantee expressivity when
+learning chiral-dependent functions."* So the honest ladder:
+
+| Rung | Status |
+|---|---|
+| 2D graph | no stereochemistry at all — blind to all 534 |
+| E(3)-invariant (distances, angles) | **provably** blind to the 87 |
+| SE(3)-invariant (adds torsions) | has *access* to parity; expressivity not guaranteed |
+| parity handed over explicitly | what our variant 3 does |
+
+Four rungs is more accurate *and* more interesting than three, because the third rung is a
+real intermediate rather than a strawman. Direct quote for rung 2: *"E(3)-invariant 3D GNNs
+that only consider pairwise atomic distances or bond angles … are inherently limited in
+their ability to distinguish enantiomers."*
 
 **[REC] This is the strongest GDL showcase on the page**, because the counts are real. Many
 people can explain E(3) versus SE(3); almost nobody grounds it in "here are 87 rows of the
@@ -203,11 +222,16 @@ never hidden — the column name says so plainly. It was just never costed.
 label normalisation is the *surprising* one, and a reader who expects a modelling mistake
 and gets a regex will remember it. Most quotable finding we have.
 
-1. **The vocabulary** — inherited wholesale from Lee et al. No `caraway`, `spearmint`,
-   `dill`. Not OpenPOM's choice; cite it upstream.
-2. **The label normalisation** — `spearmint` merged into `mint` because the string contains
-   "mint"; `caraway` deleted because it matches nothing in the 138. The chirality signal
-   died to `str.match`.
+1. **The vocabulary** — inherited wholesale from Lee et al., and now verified at source. The
+   Lee supplementary states the rule outright: *"Variations and misspellings of odor
+   descriptors were merged, and any odor descriptor with **<=30 occurrences** in the dataset
+   were discarded."* So the two descriptors that distinguish carvone died by two different
+   mechanisms in one step: `spearmint` was **merged** into `mint` as a variant, and `caraway`
+   was **deleted for being rare** — it has 10 molecules in GoodScents, well under the
+   threshold. Not OpenPOM's choice; cite it upstream.
+2. **The label normalisation** — OpenPOM then re-implements the merge downstream, and its
+   dictionary is quotable: `'mint': ['cornmint', 'peppermint', 'mint', 'minty', 'spearmint']`.
+   The chirality signal died to variant-merging plus a frequency threshold.
 3. **The flatten** — one notebook cell, under a header titled `### Handle stereo isomers`.
    Carvone's enantiomers still carried *different* labels after losses 1 and 2; this killed
    the survivor.
@@ -375,14 +399,24 @@ stronger."
 a ceiling number downward, which is exactly why the headline claim must be the *structural*
 one — see below.
 
-**The objection you will get, and the answer.** *"Intensity was out of scope — the paper
-predicts descriptors, not thresholds, so of course the format excludes it."* That objection
-is fair as stated and must be met head-on, not dodged. The answer: we are **not** saying
-they should have predicted thresholds. We are saying that if the field is arguing about
-whether chirality matters for odor ML — and it is — it needs to know that most
-well-documented chirality effects live in the modality this benchmark excludes. **So
-chirality-aware modelling on this benchmark has a low ceiling no matter how the SMILES are
-fixed.** Precise, actionable, and requires nobody to have made a mistake.
+**The objection you will get, and the answer — which Lee et al. hand us themselves.**
+*"Intensity was out of scope — the paper predicts descriptors, not thresholds, so of course
+the format excludes it."*
+
+The answer is now much stronger than an argument, because their own Discussion says:
+
+> *"the concentration of an odor influences odor character, but is not explicitly included in
+> the map."*
+
+**By their own account concentration affects odour *character*, not merely intensity.** So it
+is a known, acknowledged, unaddressed limitation rather than something outside the task. We
+are not saying they should have predicted thresholds, and we are not claiming to have noticed
+something they missed — they flagged it. Our contribution is that nobody costed it, and
+nobody connected it to chirality. **Chirality-aware modelling on this benchmark therefore has
+a low ceiling no matter how the SMILES are fixed.**
+
+**[REC] Quote them doing it.** A critique that opens by citing the authors' own caveat is far
+harder to dismiss than one that appears to have caught them out.
 
 Note this bounds the experiment before we run it, which is a point in its favour.
 
@@ -407,8 +441,19 @@ ceiling.
 Hypotheses tested and killed. **[REC] Include, but as an appendix** — credibility
 scaffolding for the sceptical reader, not narrative.
 
-Frequency-truncation hypothesis (false: hardcoded inherited list). Radical-corruption
-hypothesis (false: valence stays satisfied). Nootkatone as exhibit #2 (demoted: its 1972
+**Frequency-truncation hypothesis — and this one came back from the dead, which is the most
+interesting entry here.** I proposed that the vocabulary cut preferentially deleted rare,
+parity-carrying labels; tested it; found survivors with frequency 1 and casualties with
+frequency 187; and declared it false. It was not false. The Lee supplementary states a
+**≤30-occurrence discard rule**, and my test had counted raw GoodScents molecule frequencies
+rather than the merged counts in Lee et al.'s combined set — so I was measuring the wrong
+quantity and drew the wrong conclusion with apparent evidence. `caraway`, at 10 molecules,
+was cut for being rare exactly as I first guessed. The stronger version — that discriminating
+descriptors are *systematically* rare — remains untested and unclaimed.
+
+Radical-corruption hypothesis (false: valence stays satisfied).
+SphereNet rationale for the ladder (wrong: its separation persists through reflection; the
+failure is conformational). Nootkatone as exhibit #2 (demoted: its 1972
 primary source has limonene's exact impurity confound, never replicated in 54 years).
 Isopulegol and pinocarvone (dropped: diastereomer-only). Geraniol/nerol (demoted:
 Leffingwell independently calls nerol rose-like). Linalool's descriptor pair (demoted to
@@ -467,7 +512,11 @@ Five widgets would read as a demo reel. Three makes the page feel alive.
   end.
 - **[YOU]** Is §18 ("what died") page-visible or repo-only? I lean visible — strongest
   signal this wasn't a weekend's work — but it is your name on the self-criticism.
-- Lee et al. supplementary PDF still ungrepped. Until it is, the page cannot claim the
-  flagship paper is silent on stereochemistry. Affects §9 and §10 wording only.
+- ~~Lee et al. supplementary PDF ungrepped.~~ **CLEARED.** Retrieved via bioRxiv v4 (PMC only
+  served an interstitial), 20 pages, extraction validated before trusting the negative. Zero
+  occurrences of stereochemistry, stereoisomer, stereo, enantiomer, chiral, isomer, racemic or
+  diastereomer. `SMILES` appears once, in a GC-O contaminant column heading. **The page may
+  state that the flagship paper is silent on stereochemistry across main text and
+  supplementary both.**
 - Re-run leg 4 of §16 with the real `merger_root_dict` before quoting any number.
 - Experiment results unknown, so §17 is a question with no answer.

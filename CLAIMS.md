@@ -91,6 +91,92 @@ unless the Laska full text turns out to state enantiomeric purity.
 
 ---
 
+## Final verification round — the novelty gate, and two overturned conclusions
+
+### The novelty gate is CLEARED
+Obtained the Lee et al. supplementary via bioRxiv v4 (`.../DC1/embed/media-1.pdf`, 4.1 MB,
+20 pages) after PMC served only an interstitial. Extracted with `pdftotext` and **validated
+the extraction before trusting the negative** — 2,231 non-space characters on page 1, real
+prose, the full descriptor list present.
+
+**Zero occurrences** of `stereochem`, `stereoisomer`, `stereo`, `enantiom`, `chiral`,
+`isomer`, `racem`, `diastereo`, `optical rotation`. `SMILES` appears once, and only in a
+column heading about identifying GC-O contaminants. Combined with the main text (also zero),
+**the flagship paper is silent on stereochemistry across both.** The page may say so.
+
+### OVERTURNED 1 — the vocabulary *is* a frequency cutoff, and I killed that hypothesis wrongly
+The supplementary states it outright:
+
+> *"Variations and misspellings of odor descriptors were merged, and any odor descriptor with
+> **<=30 occurrences** in the dataset were discarded."*
+
+I had tested a "frequency truncation preferentially removed rare parity-carrying labels"
+hypothesis, found survivors with frequency 1 and non-survivors with frequency 187, and
+declared it false. **My test was measuring the wrong thing.** Variant merging happens
+*first*, then the ≤30 cutoff applies to the merged counts in Lee et al.'s combined GS+LF set
+— not to raw GoodScents molecule counts, which is what I counted.
+
+So the real mechanism for the lead exhibit is sharper than what is currently written:
+- `spearmint` → **merged** into `mint` as a variant
+- `caraway` → **deleted by the ≤30-occurrence threshold** (10 molecules in GoodScents)
+
+**[ACTION] Rewrite loss 1 in §10 around the ≤30 rule, and correct the §18 entry** — the
+hypothesis was right about the mechanism and wrong about which dataset it applied to. What I
+still cannot claim is the stronger version, that discriminating descriptors are
+*systematically* rare; that part remains untested.
+
+### OVERTURNED 2 — the SphereNet rationale for §7 was wrong
+Read the Adams et al. full text via ar5iv. SphereNet is indeed SE(3)-invariant and is a
+baseline, but Figure 3's caption says:
+
+> *"SphereNet learns good separation that persists through reflection, but the clusters
+> overlap upon rotation of internal bonds."*
+
+**Separation persists through reflection.** So SE(3)-invariance *does* buy reflection
+sensitivity, and my stated reason for not labelling rung 3 "SE(3)" — that SphereNet failed
+to distinguish enantiomers — is false. Its failure is conformational, not parity.
+
+The defensible quote for the same conclusion:
+
+> *"Using a complete set of torsion angles provides access to the full geometric information
+> present in the conformer but does not guarantee expressivity when learning
+> chiral-dependent functions."*
+
+**[ACTION] Rewrite §7's rationale.** The ladder is really four rungs: no stereo at all → E(3)
+(distances/angles, provably blind) → SE(3) (has access to parity but expressivity not
+guaranteed) → parity handed over explicitly. More accurate and more interesting than three.
+
+### Lee et al. pre-empt our concentration point — and that helps us
+Their Discussion states: *"the concentration of an odor influences odor character, but is not
+explicitly included in the map."* So they flag it themselves. Our contribution is not
+noticing it; it is that nobody costed it or connected it to chirality. **This also disarms
+the scope objection**: by their own account concentration affects odour *character*, not
+merely intensity, so it is a known unaddressed limitation rather than out of scope.
+
+### Also promoted to tier B this round
+- **Sanchez-Lengeling et al. 2019** (ar5iv, read): exact quote *"overlapping molecules
+  inherited the union of both datasets' odor descriptors"* confirmed. 5,030 molecules,
+  GoodScents n=3,786, Leffingwell n=3,561, **2,317 overlapping**. Zero mentions of
+  stereochemistry or isomers. **And crucially the paper never specifies how "overlapping" was
+  determined** — no SMILES, CAS, CID or name-matching criterion is given. That makes our
+  contribution exactly right: the union rule is published, the identity criterion is not, and
+  it turns out to be stereo-blind.
+- **Dumitrescu et al., ICLR 2025** (arXiv:2402.15864): title and ICLR 2025 confirmed; abstract
+  says *"We prove that such models must necessarily disregard chirality."* **Caveat: it is a
+  molecular *generation* paper, and the abstract never mentions reflections, O(3), SO(3) or
+  SE(3).** Cite it for the theorem, pair it with Adams for the property-prediction case, and
+  do not imply it was written about prediction.
+- **Adams, Pattanaik & Coley** (arXiv:2110.04383): title, authors, torsion-angle
+  representation, and the omission of chiral tags from the base model all confirmed at source.
+  Direct quote available: *"E(3)-invariant 3D GNNs that only consider pairwise atomic
+  distances or bond angles… are inherently limited in their ability to distinguish
+  enantiomers."* **The ICLR 2022 venue is NOT confirmed** — absent from both the arXiv listing
+  and the ar5iv text. Verify via OpenReview or cite as a preprint.
+- **`BioMachineLearning/openpom` has `has_issues=False`**, is a fork, parent
+  `ARY2260/openpom` which has issues enabled with 3 open. Checked via the GitHub API myself.
+
+---
+
 ## Tier A — reproducible from our own code
 
 Run `python audit/audit.py`, `python audit/assets.py`,
